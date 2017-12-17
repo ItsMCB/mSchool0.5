@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body { background-color: black; } div { color: white; font-size: 25px;} .ct { background-color: grey; color: white; font-size: 25px;}
+</style>
+<style>
+.clickme {
+    background-color: #008CBA; /* Blue */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+@import url(https://fonts.googleapis.com/css?family=Arvo);
+
+.HelloWorld  {
+
+  color:	#D5AD6D; /*if no support for background-clip*/
+	
+	background: -webkit-linear-gradient(transparent, transparent),
+             -webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
+	background: -o-linear-gradient(transparent, transparent);
+	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+</style>
+<script type="text/javascript">
+function saveEdits() {
+
+//get the editable element
+var editElem = document.getElementById("edit");
+
+//get the edited element content
+var userVersion = editElem.innerHTML;
+
+//save the content to local storage
+localStorage.userEdits = userVersion;
+
+//write a confirmation to the user
+document.getElementById("update").innerHTML="Edits saved!";
+
+}
+</script>
+<script>
+function checkEdits() {
+
+//find out if the user has previously saved edits
+if(localStorage.userEdits!=null)
+document.getElementById("edit").innerHTML = localStorage.userEdits;
+}
+</script>
+</head>
+
+<body onload="checkEdits()">
+<center>
+<h1 class="HelloWorld"> 2Do <h1>
+</center>
+<!-- Period 1 -->
+<div class="ct" id="edit" contenteditable="true">
+<p> Here is the element's original content </p>
+</div>
+<input type="button" value="Save" class="clickme" onclick="saveEdits()"/>
+<div id="update"><p> - Edit the text and click to save for next time</p></div>
+</body>
+</html>
