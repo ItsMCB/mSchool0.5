@@ -1,6 +1,8 @@
+
 <!DOCTYPE html>
 <html>
 <head>
+<title>2Do - mSchool Lex Edition</title>
 <style>
 body { background-color: black; } div { color: white; font-size: 25px;} .ct { background-color: grey; color: white; font-size: 25px;}
 </style>
@@ -28,6 +30,7 @@ body { background-color: black; } div { color: white; font-size: 25px;} .ct { ba
 	background: -o-linear-gradient(transparent, transparent);
 	-webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 50px;
 }
 
 
@@ -65,7 +68,7 @@ document.getElementById("edit").innerHTML = localStorage.userEdits;
 </center>
 <!-- Period 1 -->
 <div class="ct" id="edit" contenteditable="true">
-<p> Here is the element's original content </p>
+<p> Double Click This Text Box To Start Editing It, Remember To Click The Save Button To Save What You Typed!</p>
 </div>
 <input type="button" value="Save" class="clickme" onclick="saveEdits()"/>
 <div id="update"><p> - Edit the text and click to save for next time</p></div>
