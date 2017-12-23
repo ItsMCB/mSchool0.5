@@ -274,16 +274,16 @@ function openBing() {
     window.open('http://www.bing.com', '_blank', 'toolbar=0,location=0,menubar=0');
 }
 </script>
-	<script>
+<script>
+var MAILWindow;
+
 function openMAIL() {
-    window.open('https://mail.google.com/', '_blank', 'toolbar=0,location=0,menubar=0');
-	
+    myWindow = window.open('https://mail.google.com/', '_blank', 'toolbar=0,location=0,menubar=0');
 }
-		
+
 function closeMAIL() {
-    window.close();
+    myWindow.close();
 }
-</script>
 </script>
 
 <!-- Backround Audio -->
