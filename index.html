@@ -194,11 +194,11 @@ body {
 <a href="http://bing.com" target="search_iframe"><button class="tooltipbutton" id="hidehome">Close</button><br></a>
 </div>
 	<!-- Mail App -->
-<a><div class="tooltip"><img src="https://i.imgur.com/FtIAHms.png" alt="Mail" height="102" width="162"></a>
+<a><div class="tooltip"><img src="/Assets/Mail/Mail logo.png" alt="Mail" height="102" width="162"></a>
   <span class="tooltiptext">
     <h1 class="ttt"> Mail </h1>
 <button onclick="openMAIL()" class="tooltipbutton" id="showhome">Open</button><br>
-<a href="http://bing.com" target="search_iframe"><button class="tooltipbutton" id="hidehome">Close</button><br></a>
+<button onclick="closeMAIL() class="tooltipbutton" id="hidehome">Close</button><br>
 	  </div>
 	  
 </div>
@@ -277,7 +277,13 @@ function openBing() {
 	<script>
 function openMAIL() {
     window.open('https://mail.google.com/', '_blank', 'toolbar=0,location=0,menubar=0');
+	
 }
+		
+function closeMAIL() {
+    window.close();
+}
+</script>
 </script>
 
 <!-- Backround Audio -->
