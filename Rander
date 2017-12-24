@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+<title>Rander - mSchool </title>
+
+<style>
+.media_image{
+border-radius:8px 8px 0 0;cursor:pointer 
+}
+body {
+	background-color:black;
+    color:white;
+}
+</style>
+</head>
+<html>
+<body>
+
+<center>
+<h1> Rander </h1>
+<a href="https://goo.gl/forms/oN0qSlxCA7bSSCvC2"><h2> Submit Your Own </h2></a>
+<img class="media_image" src="https://img.ifcdn.com/images/3ede6bbc70e0c8b12d20f6a339516d0edaa2d7aa01a52438b4809cfc6502f92c_1.jpg" alt="Flowers in Chania" width="460" height="445">
+
+<img class="media_image" src="https://img.ifcdn.com/images/4854f0a1ea7cc5a19a81aabee7ce3ca02c2ebed776956e40658ab481ad0b235b_1.jpg" alt="Flowers in Chania" width="460" height="445">
+
+
+
+<img class="media_image" src="https://img.ifcdn.com/images/a98e278d66f39301857572b2eb0dc63dfc60fc301a58bf33b3d16c8a1eba7895_1.jpg" alt="Flowers in Chania" width="460" height="445">
+
+
+
+
+
+
+</center>
+</body>
+</html>
