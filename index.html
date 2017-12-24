@@ -158,6 +158,7 @@ body {
 </div>
 <div class="timedate">
 <iframe  frameBorder="0" scrolling="no" src="https://itsmcb.github.io/mSchool0.5/timedate" width="95" height="50"></iframe>
+	  <button onclick="on()">See Applications</button>
 	</div>
 
 
@@ -437,6 +438,119 @@ function fullscreenChange() {
   iframe.src = iframe.src;
 }
 	</script>
+	
+	<!-- sCRIPTS FOR APPLICATION APP // APPLICATION FOLDER -->
+	<style>
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 20px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+</style>
+	<div id="overlay">
+  <div id="text">
+  <style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
+	  <h4 onclick="off()"> Close <h4>
+<input type="text" id="myInput" onkeyup="Search()" placeholder="Search for applications..." title="Type in a application name">
+
+<ul id="myUL">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Web</a></li>
+
+  <li><a href="#">2Do</a></li>
+  <li><a href="#">Mail</a></li>
+
+  <li><a href="#">Google Classroom</a></li>
+</ul>
+
+<script>
+function Search() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+
+        }
+    }
+}
+</script>
+  
+  
+  </div>
+</div>
+
+
+
+<script>
+function on() {
+    document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+    document.getElementById("overlay").style.display = "none";
+}
+</script>
 
 </body>
 </html>
