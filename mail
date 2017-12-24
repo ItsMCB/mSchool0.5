@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+<title>Mail - mSchool </title>
+
+
+<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+
+<style>
+body {
+	color:white;
+    background-color:grey;
+    font-family: 'Audiowide', cursive;
+    
+
+    
+}
+.titlediv {
+background-color:grey;
+}
+.maincondiv {
+background-color:#D3D3D3;
+color:black;
+
+}
+h2 {
+font-size:45px;
+}
+</style>
+
+
+</head>
+<html>
+<body><center><br>
+<div class="titlediv">
+<h1> Choose Your Mail Client </h1>
+</div>
+
+<div class="maincondiv">
+<br>
+<a STYLE="text-decoration: none" href="https://mail.google.com/mail/u/0/#inbox"> <h2> GMAIL <h2></a>
+<a STYLE="text-decoration: none" href="https://www.icloud.com/#mail"> <h2> iCloud <h2></a>
+
+<a STYLE="text-decoration: none" href="https://outlook.live.com/owa/"> <h2> Outlook <h2></a>
+
+<a STYLE="text-decoration: none" href="https://mail.yahoo.com/"> <h2> Yahoo! <h2></a>
+
+
+<br></div>
+
+
+
+</body>
+</html>
