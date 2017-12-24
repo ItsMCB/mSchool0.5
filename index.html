@@ -309,6 +309,18 @@ function closeGoogleClassroom() {
 }
 </script>
 	
+	<script>
+var QuizletWindow;
+
+function openQuizlet() {
+    QuizletWindow = window.open('https://quizlet.com/latest/', '_blank', 'toolbar=0,location=0,menubar=0');
+}
+
+function closeQuizlet() {
+    QuizletWindow.close();
+}
+</script>
+	
 
 <!-- Backround Audio -->
 <audio autoplay id="BackgroundAudio">
@@ -515,6 +527,7 @@ function fullscreenChange() {
   <li onclick="openMAIL()"><a href="#">Mail</a></li>
 
   <li><a href="#">Google Classroom</a></li>
+	<li onclick="openQuizlet()"><a href="#">Mail</a></li>
 </ul>
 
 <script>
