@@ -200,6 +200,13 @@ body {
     <h1 class="ttt"> Mail </h1>
 <button onclick="openMAIL()" class="tooltipbutton" id="showhome">Open</button><br>
 <button onclick="closeMAIL()" class="tooltipbutton" id="hidehome">Close</button><br>
+	  
+	  <!-- Google Classroom App -->
+<a><div class="tooltip"><img src="http://lifeinthetechlab.com/teacher/conqueringCBs/images/classroomLogo.png" alt="Google Classroom" height="102" width="162"></a>
+  <span class="tooltiptext">
+    <h1 class="ttt"> Google Classroom </h1>
+<button onclick="openGoogleClassroom()" class="tooltipbutton" id="showhome">Open</button><br>
+<button onclick="closeGoogleClassroom()" class="tooltipbutton" id="hidehome">Close</button><br>
 	  </div>
 	  
 </div>
@@ -287,6 +294,19 @@ function closeMAIL() {
     MAILWindow.close();
 }
 </script>
+	
+	<script>
+var GoogleClassroomWindow;
+
+function openGoogleClassroom() {
+    GoogleClassroomWindow = window.open('https://mail.google.com/', '_blank', 'toolbar=0,location=0,menubar=0');
+}
+
+function closeGoogleClassroom() {
+    GoogleClassroomWindow.close();
+}
+</script>
+	
 
 <!-- Backround Audio -->
 <audio autoplay id="BackgroundAudio">
