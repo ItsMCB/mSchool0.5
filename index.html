@@ -331,6 +331,30 @@ function closeGoogleDrive() {
     GoogleDriveWindow.close();
 }
 </script>
+	
+	<script>
+var GoogleDocsWindow;
+
+function openGoogleDocs() {
+    GoogleDocsWindow = window.open('https://docs.google.com/', '_blank', 'toolbar=0,location=0,menubar=0');
+}
+
+function closeGoogleDocs() {
+    GoogleDocsWindow.close();
+}
+</script>
+	
+	<script>
+var GoogleSheetsWindow;
+
+function openGoogleSheets() {
+    GoogleSheetsWindow = window.open('https://docs.google.com/spreadsheets/u/0/', '_blank', 'toolbar=0,location=0,menubar=0');
+}
+
+function closeGoogleSheets() {
+    GoogleSheetsWindow.close();
+}
+</script>
 
 <!-- Backround Audio -->
 <audio autoplay id="BackgroundAudio">
@@ -538,7 +562,9 @@ function fullscreenChange() {
 
   <li><a href="#">Google Classroom</a></li>
 	<li onclick="openQuizlet()"><a href="#">Quizlet</a></li>
-	<li onclick="openGoogleDrive()"><a href="#">Quizlet</a></li>
+	<li onclick="openGoogleDrive()"><a href="#">Google Drive</a></li>
+	<li onclick="openGoogleDocs()"><a href="#">Google Docs</a></li>
+	<li onclick="openGoogleSheets()"><a href="#">Google Sheets</a></li>
 </ul>
 
 <script>
