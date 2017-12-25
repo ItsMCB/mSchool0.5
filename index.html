@@ -355,6 +355,29 @@ function closeGoogleSheets() {
     GoogleSheetsWindow.close();
 }
 </script>
+	
+	<script>
+var GoogleSlidesWindow;
+
+function openGoogleSlides() {
+    GoogleSlidesWindow = window.open('https://docs.google.com/presentation/u/0/', '_blank', 'toolbar=0,location=0,menubar=0');
+}
+
+function closeGoogleSlides() {
+    GoogleSlidesWindow.close();
+}
+</script>
+	<script>
+var GoogleFormsWindow;
+
+function openGoogleForms() {
+    GoogleFormsWindow = window.open('https://docs.google.com/forms/u/0/', '_blank', 'toolbar=0,location=0,menubar=0');
+}
+
+function closeGoogleForms() {
+    GoogleFormsWindow.close();
+}
+</script>
 
 <!-- Backround Audio -->
 <audio autoplay id="BackgroundAudio">
@@ -565,6 +588,8 @@ function fullscreenChange() {
 	<li onclick="openGoogleDrive()"><a href="#">Google Drive</a></li>
 	<li onclick="openGoogleDocs()"><a href="#">Google Docs</a></li>
 	<li onclick="openGoogleSheets()"><a href="#">Google Sheets</a></li>
+	<li onclick="openGoogleSlides()"><a href="#">Google Sheets</a></li>
+	<li onclick="openGoogleForms()"><a href="#">Google Sheets</a></li>
 </ul>
 
 <script>
