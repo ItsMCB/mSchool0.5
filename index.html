@@ -153,12 +153,13 @@ body {
 <button class="bgaudiobutton">MCB</button>
 <button onclick="document.getElementById('BackgroundAudio').play()" class="bgaudiobutton">Play</button>
 <button onclick="document.getElementById('BackgroundAudio').pause()"class="bgaudiobutton">Pause</button>
+	<button class="bgaudiobutton" onclick="on()">See Apps</button>
 <button class="bgaudiobutton">Settings</button>
 <a href="http://bing.com" target="search_iframe"><button class="closeapp">X</button></a>
 </div>
 <div class="timedate">
 <iframe  frameBorder="0" scrolling="no" src="https://itsmcb.github.io/mSchool0.5/timedate" width="95" height="50"></iframe>
-	  &nbsp; <button class="bgaudiobutton" onclick="on()">See Apps</button>
+	  <button class="bgaudiobutton" onclick="openFeedback()">FEEDBACK</button>
 	</div>
 
 
@@ -376,6 +377,18 @@ function openGoogleForms() {
 
 function closeGoogleForms() {
     GoogleFormsWindow.close();
+}
+</script>
+	
+	<script>
+var FeedbackWindow;
+
+function openFeedback() {
+    FeedbackWindow = window.open('https://goo.gl/forms/6Sn1k6xOrsxpaJnx2', '_blank', 'toolbar=0,location=0,menubar=0');
+}
+
+function closeFeedback() {
+    FeedbackWindow.close();
 }
 </script>
 
