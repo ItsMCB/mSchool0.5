@@ -391,6 +391,18 @@ function closeFeedback() {
     FeedbackWindow.close();
 }
 </script>
+	
+	<script>
+var RanderWindow;
+
+function openRander() {
+    RanderWindow = window.open('https://goo.gl/forms/6Sn1k6xOrsxpaJnx2', '_blank', 'toolbar=0,location=0,menubar=0');
+}
+
+function closeRander() {
+    RanderWindow.close();
+}
+</script>
 
 <!-- Backround Audio -->
 <audio autoplay id="BackgroundAudio">
@@ -603,6 +615,8 @@ function fullscreenChange() {
 	<li onclick="openGoogleSheets()"><a href="#">Google Sheets</a></li>
 	<li onclick="openGoogleSlides()"><a href="#">Google Slides</a></li>
 	<li onclick="openGoogleForms()"><a href="#">Google Forms</a></li>
+	<li onclick="openRander()"><a href="#">Rander</a></li>
+
 </ul>
 
 <script>
