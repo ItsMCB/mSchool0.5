@@ -320,7 +320,17 @@ function closeQuizlet() {
     QuizletWindow.close();
 }
 </script>
-	
+	<script>
+var GoogleDriveWindow;
+
+function openGoogleDrive() {
+    GoogleDriveWindow = window.open('https://quizlet.com/latest/', '_blank', 'toolbar=0,location=0,menubar=0');
+}
+
+function closeGoogleDrive() {
+    GoogleDriveWindow.close();
+}
+</script>
 
 <!-- Backround Audio -->
 <audio autoplay id="BackgroundAudio">
@@ -528,6 +538,7 @@ function fullscreenChange() {
 
   <li><a href="#">Google Classroom</a></li>
 	<li onclick="openQuizlet()"><a href="#">Quizlet</a></li>
+	<li onclick="openGoogleDrive()"><a href="#">Quizlet</a></li>
 </ul>
 
 <script>
