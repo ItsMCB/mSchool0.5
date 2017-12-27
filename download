@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+body {
+	background-color: black;
+    color:white;
+}
+</style>
+<center>
+<h1>Click on the mSchool Logo to download the MacOS Package.</h1>
+
+<a href="https://itsmcb.github.io/mSchool0.5/mSchool WebOS.zip" download>
+  <img border="0" src="https://itsmcb.github.io/mSchool0.5/android-icon-144x144.png" alt="W3Schools" width="142" height="142">
+</a>
+
+<p> Thank you for choosing mSchool! </p>
+</center>
+
+</body>
+</html>
