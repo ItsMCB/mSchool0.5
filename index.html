@@ -617,10 +617,22 @@ function fullscreenChange() {
 	<li onclick="openGoogleForms()"><a href="#">Google Forms</a></li>
 	<li onclick="openRander()"><a href="#">Rander</a></li>
 	<li onclick="openMozillaRTE()"><a href="https://itsmcb.github.io/mSchool0.5/Mozilla%20Rich%20Text%20Editor%20for%20mSchool" target="search_iframe">Mozilla Rich Text Editor</a></li>
-	
+	<li onclick="SystemCloseloaded()"><a href="#">Logout</a></li>
 
 </ul>
+<script>
+function SystemCloseloaded()
+{
+    alert("Closing Systems in 5 seconds!");
+    window.setTimeout(SystemCloseCloseMe, 500);
+}
 
+function SystemCloseCloseMe() 
+{
+    window.close();
+}
+</script>
+		  
 <script>
 function Search() {
     var input, filter, ul, li, a, i;
