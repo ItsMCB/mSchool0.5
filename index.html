@@ -4,7 +4,7 @@
 	<title>mSchool</title>
 	<link rel="apple-touch-icon" sizes="57x57" href="/mSchool0.5/apple-icon-57x57.png">
 	<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
-	
+
 
 <link rel="apple-touch-icon" sizes="60x60" href="/mSchool0.5/apple-icon-60x60.png">
 
@@ -176,12 +176,12 @@ body {
 <button class="bgaudiobutton">MCB</button>
   <div class="dropdown-content">
    <a style="text-decoration: none; color: white;" href="https://itsmcb.github.io/mSchool0.5/about"><p> About mSchoolOS </p></a>
-   
-   
+
+
      <a style="text-decoration: none; color: white;" href="https://itsmcb.github.io/mSchool0.5/RCC"><p> Root Control Center </p></a>
     <a style="text-decoration: none; color: white;" href="https://www.google.com/"><p> Logout </p></a>
   </div>
-  
+
 </div>
 
 <button onclick="document.getElementById('BackgroundAudio').play()" class="bgaudiobutton">Play</button>
@@ -237,7 +237,7 @@ body {
 <button onclick="openMAIL()" class="tooltipbutton" id="showhome">Open</button><br>
 <button onclick="closeMAIL()" class="tooltipbutton" id="hidehome">Close</button><br>
 	  </div>
-	  
+
 	  <!-- Google Classroom App -->
 <a><div class="tooltip"><img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Google_Classroom_Logo.png" alt="Google Classroom" height="102" width="162"></a>
   <span class="tooltiptext">
@@ -245,29 +245,29 @@ body {
 <button onclick="openGoogleClassroom()" class="tooltipbutton" id="showhome">Open</button><br>
 <button onclick="closeGoogleClassroom()" class="tooltipbutton" id="hidehome">Close</button><br>
 	  </div>
-	  
-</div>
-
-	
-	
-	
-	
-	
-	
-
-
-
-
-
 
 </div>
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
 <div class="lol" id="container">
 	<img class="button" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Ic_fullscreen_36px.svg/2000px-Ic_fullscreen_36px.svg.png" height="25" width='25'><br>
 	<center>
 		<iframe height="600px" width="1350px" src="https://bing.com" name="search_iframe"></iframe>
 	</center>
-	
+
 <div class="error"></div>
 </div>
 
@@ -331,7 +331,7 @@ function closeMAIL() {
     MAILWindow.close();
 }
 </script>
-	
+
 	<script>
 var GoogleClassroomWindow;
 
@@ -343,7 +343,7 @@ function closeGoogleClassroom() {
     GoogleClassroomWindow.close();
 }
 </script>
-	
+
 	<script>
 var QuizletWindow;
 
@@ -366,7 +366,7 @@ function closeGoogleDrive() {
     GoogleDriveWindow.close();
 }
 </script>
-	
+
 	<script>
 var GoogleDocsWindow;
 
@@ -378,7 +378,7 @@ function closeGoogleDocs() {
     GoogleDocsWindow.close();
 }
 </script>
-	
+
 	<script>
 var GoogleSheetsWindow;
 
@@ -390,7 +390,7 @@ function closeGoogleSheets() {
     GoogleSheetsWindow.close();
 }
 </script>
-	
+
 	<script>
 var GoogleSlidesWindow;
 
@@ -413,7 +413,7 @@ function closeGoogleForms() {
     GoogleFormsWindow.close();
 }
 </script>
-	
+
 	<script>
 var FeedbackWindow;
 
@@ -425,7 +425,7 @@ function closeFeedback() {
     FeedbackWindow.close();
 }
 </script>
-	
+
 	<script>
 var RanderWindow;
 
@@ -435,6 +435,50 @@ function openRander() {
 
 function closeRander() {
     RanderWindow.close();
+}
+</script>
+<script>
+var GoogleEarthWindow;
+
+function openGoogleEarth() {
+	GoogleEarthWindow = window.open('https://earth.google.com/web/', '_blank', 'toolbar=0,location=0,menubar=0');
+}
+
+function closeGoogleEarth() {
+	GoogleEarthWindow.close();
+}
+</script>
+<script>
+var Cnn10Window;
+
+function openCnn10() {
+	Cnn10Window = window.open('http://www.cnn.com/cnn10', '_blank', 'toolbar=0,location=0,menubar=0');
+}
+
+function closeCnn10() {
+	Cnn10Window.close();
+}
+</script>
+<script>
+var PowerSchoolWindow;
+
+function openPowerSchool() {
+	PowerSchoolWindow = window.open('https://ps.d64.org/public/', '_blank', 'toolbar=0,location=0,menubar=0');
+}
+
+function closePowerSchool() {
+	PowerSchoolWindow.close();
+}
+</script>
+<script>
+var LMSStudentPortalWindow;
+
+function openLMSStudentPortal() {
+	LMSStudentPortalWindow = window.open('https://sites.google.com/a/d64.org/lincoln-student-portal/', '_blank', 'toolbar=0,location=0,menubar=0');
+}
+
+function closeLMSStudentPortal() {
+	LMSStudentPortalWindow.close();
 }
 </script>
 
@@ -509,12 +553,12 @@ if(localStorage.userEdits!=null)
 document.getElementById("edit").innerHTML = localStorage.userEdits;
 }
 </script>
-	
+
 <!-- Attempt at Full-Screen iFrames -->
 	<script>
 var button = document.querySelector('#container .button');
 button.addEventListener('click', fullscreen);
-// when you are in fullscreen, ESC and F11 may not be trigger by keydown listener. 
+// when you are in fullscreen, ESC and F11 may not be trigger by keydown listener.
 // so don't use it to detect exit fullscreen
 document.addEventListener('keydown', function (e) {
   console.log('key press' + e.keyCode);
@@ -527,11 +571,11 @@ document.addEventListener('MSFullscreenChange', fullscreenChange);
 
 function fullscreen() {
   // check if fullscreen mode is available
-  if (document.fullscreenEnabled || 
-    document.webkitFullscreenEnabled || 
+  if (document.fullscreenEnabled ||
+    document.webkitFullscreenEnabled ||
     document.mozFullScreenEnabled ||
     document.msFullscreenEnabled) {
-    
+
     // which element will be fullscreen
     var iframe = document.querySelector('#container iframe');
     // Do fullscreen
@@ -552,7 +596,7 @@ function fullscreen() {
 
 function fullscreenChange() {
   if (document.fullscreenEnabled ||
-       document.webkitIsFullScreen || 
+       document.webkitIsFullScreen ||
        document.mozFullScreen ||
        document.msFullscreenElement) {
     console.log('enter fullscreen');
@@ -566,7 +610,7 @@ function fullscreenChange() {
   iframe.src = iframe.src;
 }
 	</script>
-	
+
 	<!-- sCRIPTS FOR APPLICATION APP // APPLICATION FOLDER -->
 	<style>
 #overlay {
@@ -651,22 +695,13 @@ function fullscreenChange() {
 	<li onclick="openGoogleForms()"><a href="#">Google Forms</a></li>
 	<li onclick="openRander()"><a href="#">Rander</a></li>
 	<li onclick="openMozillaRTE()"><a href="https://itsmcb.github.io/mSchool0.5/Mozilla%20Rich%20Text%20Editor%20for%20mSchool" target="search_iframe">Mozilla Rich Text Editor</a></li>
-	<li onclick="SystemCloseloaded()"><a href="#">Logout</a></li>
+	<li onclick="openGoogleEarth()"><a href="#">Google Earth</a></li>
+	<li onclick="openCnn10()"><a href="#">Cnn10</a></li>
+		<li onclick="openPowerSchool()"><a href="#">Powerschool</a></li>
+			<li onclick="openLMSStudentPortal()"><a href="#">Lincol Student Portal</a></li>
 
 </ul>
-<script>
-function SystemCloseloaded()
-{
-    alert("Closing Systems in 5 seconds!");
-    window.setTimeout(SystemCloseCloseMe, 500);
-}
 
-function SystemCloseCloseMe() 
-{
-    window.close();
-}
-</script>
-		  
 <script>
 function Search() {
     var input, filter, ul, li, a, i;
@@ -685,8 +720,8 @@ function Search() {
     }
 }
 </script>
-  
-  
+
+
   </div>
 </div>
 
