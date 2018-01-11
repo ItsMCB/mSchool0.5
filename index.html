@@ -116,6 +116,27 @@ body {
     display: block;
 }
 </style>
+<style>
+.dropdownse {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-contentse {
+    display: none;
+    position: absolute;
+    background-color: #008CBA;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    color: white
+}
+
+.dropdownse:hover .dropdown-contentse {
+    display: block;
+}
+</style>
 
 <!-- Here is the start of the body -->
 <style>
@@ -231,7 +252,7 @@ body {
 <a href="http://bing.com" target="search_iframe"><button class="tooltipbutton" id="hidehome">Close</button><br></a>
 </div>
 	<!-- Mail App -->
-<a><div class="tooltip"><img src="https://i.imgur.com/FtIAHms.png" alt="Mail" height="102" width="162"></a>
+<a href="http://mail.google.com" target="_blank"><div class="tooltip"><img src="https://i.imgur.com/FtIAHms.png" alt="Mail" height="102" width="162"></a>
   <span class="tooltiptext">
     <h1 class="ttt"> Mail </h1>
 <button onclick="openMAIL()" class="tooltipbutton" id="showhome">Open</button><br>
@@ -239,7 +260,7 @@ body {
 	  </div>
 
 	  <!-- Google Classroom App -->
-<a><div class="tooltip"><img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Google_Classroom_Logo.png" alt="Google Classroom" height="102" width="162"></a>
+<a href="http://classroom.google.com" target="_blank"><div class="tooltip"><img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Google_Classroom_Logo.png" alt="Google Classroom" height="102" width="162"></a>
   <span class="tooltiptext">
     <h1 class="ttt"> Google Classroom </h1>
 <button onclick="openGoogleClassroom()" class="tooltipbutton" id="showhome">Open</button><br>
@@ -247,17 +268,6 @@ body {
 	  </div>
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
 
 
 </div>
@@ -309,178 +319,6 @@ setInterval(function() {
 }, 10000);
 </script>
 
-<!-- Web Browser App Scripts -->
-<script>
-function openGoogle() {
-    window.open('http://www.google.com', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-</script>
-<script>
-function openBing() {
-    window.open('http://www.bing.com', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-</script>
-<script>
-var MAILWindow;
-
-function openMAIL() {
-    MAILWindow = window.open('https://mail.google.com/', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-
-function closeMAIL() {
-    MAILWindow.close();
-}
-</script>
-
-	<script>
-var GoogleClassroomWindow;
-
-function openGoogleClassroom() {
-    GoogleClassroomWindow = window.open('https://classroom.google.com/', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-
-function closeGoogleClassroom() {
-    GoogleClassroomWindow.close();
-}
-</script>
-
-	<script>
-var QuizletWindow;
-
-function openQuizlet() {
-    QuizletWindow = window.open('https://quizlet.com/latest/', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-
-function closeQuizlet() {
-    QuizletWindow.close();
-}
-</script>
-	<script>
-var GoogleDriveWindow;
-
-function openGoogleDrive() {
-    GoogleDriveWindow = window.open('https://drive.google.com/', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-
-function closeGoogleDrive() {
-    GoogleDriveWindow.close();
-}
-</script>
-
-	<script>
-var GoogleDocsWindow;
-
-function openGoogleDocs() {
-    GoogleDocsWindow = window.open('https://docs.google.com/', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-
-function closeGoogleDocs() {
-    GoogleDocsWindow.close();
-}
-</script>
-
-	<script>
-var GoogleSheetsWindow;
-
-function openGoogleSheets() {
-    GoogleSheetsWindow = window.open('https://docs.google.com/spreadsheets/u/0/', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-
-function closeGoogleSheets() {
-    GoogleSheetsWindow.close();
-}
-</script>
-
-	<script>
-var GoogleSlidesWindow;
-
-function openGoogleSlides() {
-    GoogleSlidesWindow = window.open('https://docs.google.com/presentation/u/0/', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-
-function closeGoogleSlides() {
-    GoogleSlidesWindow.close();
-}
-</script>
-	<script>
-var GoogleFormsWindow;
-
-function openGoogleForms() {
-    GoogleFormsWindow = window.open('https://docs.google.com/forms/u/0/', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-
-function closeGoogleForms() {
-    GoogleFormsWindow.close();
-}
-</script>
-
-	<script>
-var FeedbackWindow;
-
-function openFeedback() {
-    FeedbackWindow = window.open('https://goo.gl/forms/6Sn1k6xOrsxpaJnx2', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-
-function closeFeedback() {
-    FeedbackWindow.close();
-}
-</script>
-
-	<script>
-var RanderWindow;
-
-function openRander() {
-    RanderWindow = window.open('https://itsmcb.github.io/mSchool0.5/Rander', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-
-function closeRander() {
-    RanderWindow.close();
-}
-</script>
-<script>
-var GoogleEarthWindow;
-
-function openGoogleEarth() {
-	GoogleEarthWindow = window.open('https://earth.google.com/web/', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-
-function closeGoogleEarth() {
-	GoogleEarthWindow.close();
-}
-</script>
-<script>
-var Cnn10Window;
-
-function openCnn10() {
-	Cnn10Window = window.open('http://www.cnn.com/cnn10', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-
-function closeCnn10() {
-	Cnn10Window.close();
-}
-</script>
-<script>
-var PowerSchoolWindow;
-
-function openPowerSchool() {
-	PowerSchoolWindow = window.open('https://ps.d64.org/public/', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-
-function closePowerSchool() {
-	PowerSchoolWindow.close();
-}
-</script>
-<script>
-var LMSStudentPortalWindow;
-
-function openLMSStudentPortal() {
-	LMSStudentPortalWindow = window.open('https://sites.google.com/a/d64.org/lincoln-student-portal/', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-
-function closeLMSStudentPortal() {
-	LMSStudentPortalWindow.close();
-}
-</script>
 
 <!-- Backround Audio -->
 <audio autoplay id="BackgroundAudio">
@@ -627,115 +465,17 @@ function fullscreenChange() {
     cursor: pointer;
 }
 
-#text{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 20px;
-    color: white;
-    transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-}
 </style>
 	<div id="overlay">
   <div id="text">
-  <style>
-* {
-  box-sizing: border-box;
-}
-
-#myInput {
-  background-image: url('/css/searchicon.png');
-  background-position: 10px 12px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-}
-
-#myUL {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-#myUL li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  color: black;
-  display: block
-}
-
-#myUL li a:hover:not(.header) {
-  background-color: #eee;
-}
-</style>
-	  <h4 onclick="off()"> Close <h4>
-<input type="text" id="myInput" onkeyup="Search()" placeholder="Search for applications..." title="Type in a application name">
-
-<ul id="myUL">
-	<li><a href="#">Home</a></li>
-  <li><a href="http://bing.com" target="search_iframe">Web</a></li>
-
-  <li><a href="https://itsmcb.github.io/mSchool0.5/2Do" target="search_iframe">2Do</a></li>
-  <li onclick="openMAIL()"><a href="#">Mail</a></li>
-
-  <li onclick="openGoogleClassroom()"><a href="#">Google Classroom</a></li>
-	<li onclick="openQuizlet()"><a href="#">Quizlet</a></li>
-	<li onclick="openGoogleDrive()"><a href="#">Google Drive</a></li>
-	<li onclick="openGoogleDocs()"><a href="#">Google Docs</a></li>
-	<li onclick="openGoogleSheets()"><a href="#">Google Sheets</a></li>
-	<li onclick="openGoogleSlides()"><a href="#">Google Slides</a></li>
-	<li onclick="openGoogleForms()"><a href="#">Google Forms</a></li>
-	<li onclick="openRander()"><a href="#">Rander</a></li>
-	<li onclick="openMozillaRTE()"><a href="https://itsmcb.github.io/mSchool0.5/Mozilla%20Rich%20Text%20Editor%20for%20mSchool" target="search_iframe">Mozilla Rich Text Editor</a></li>
-	<li onclick="openGoogleEarth()"><a href="#">Google Earth</a></li>
-	<li onclick="openCnn10()"><a href="#">Cnn10</a></li>
-		<li onclick="openPowerSchool()"><a href="#">Powerschool</a></li>
-			<li onclick="openLMSStudentPortal()"><a href="#">Lincol Student Portal</a></li>
-
-</ul>
-
-<script>
-function Search() {
-    var input, filter, ul, li, a, i;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-
-        }
-    }
-}
-</script>
-
+<center>
+<h4 class="bgaudiobutton" onclick="off()" style="color:white;font-size:20px;"> Close <h4>
+<iframe height="600px" width="1450px" src="https://itsmcb.github.io/mSchool0.5/search" name="sys_search_frame"></iframe>
+</center>
 
   </div>
 </div>
 
-
-
-<script>
-function on() {
-    document.getElementById("overlay").style.display = "block";
-}
-
-function off() {
-    document.getElementById("overlay").style.display = "none";
-}
-</script>
 
 </body>
 </html>
