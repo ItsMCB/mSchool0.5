@@ -1,0 +1,99 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<div data-role="page" id="pageone">
+  <div data-role="main" class="ui-content">
+    <form class="ui-filterable">
+      <input id="myFilter" data-type="search">
+    </form>
+		 <h4 onclick="off()"> Close <h4>
+    <ul data-role="listview" data-filter="true" data-input="#myFilter" data-autodividers="true" data-inset="true">
+
+
+	<li><a href="https://itsmcb.github.io/mSchool0.5/2Do" target="_blank"><button class="newsearchbutton">2Do</button></a><br>
+		<button onclick="openTwoDo" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+		<button onclick="closeTwoDo()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+				</li>
+
+	<li><a href="https://mail.google.com/" target="_blank"><button class="newsearchbutton">Mail</button></a><br>
+		<button onclick="openMAIL" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+		<button onclick="closeMAIL()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+				</li>
+
+	<li><a href="https://classroom.google.com/" target="_blank"><button class="newsearchbutton">Classroom</button></a><br>
+		<button onclick="openGoogleClassroom()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+		<button onclick="closeGoogleClassroom()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+				</li>
+
+	<li><a href="https://quizlet.com/latest/" target="_blank"><button class="newsearchbutton">Quizlet</button></a><br>
+		<button onclick="openQuizlet()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+		<button onclick="closeQuizlet()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+				</li>
+
+	<li><a href="https://drive.google.com/" target="_blank"><button class="newsearchbutton">Google Drive</button></a><br>
+		<button onclick="openGoogleDrive()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+		<button onclick="closeGoogleDrive()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+				</li>
+
+	<li><a href="https://docs.google.com/" target="_blank"><button class="newsearchbutton">Google Docs</button></a><br>
+		<button onclick="openGoogleDocs()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+		<button onclick="closeGoogleDocs()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+				</li>
+
+	<li><a href="https://docs.google.com/spreadsheets/u/0/" target="_blank"><button class="newsearchbutton">Google Sheets</button></a><br>
+		<button onclick="openGoogleSheets()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+		<button onclick="closeGoogleSheets()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+				</li>
+
+	<li><a href="https://docs.google.com/presentation/u/0/" target="_blank"><button class="newsearchbutton">Google Slides</button></a><br>
+		<button onclick="openGoogleSlides()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+		<button onclick="closeGoogleSlides()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+				</li>
+
+	<li><a href="https://docs.google.com/forms/u/0/" target="_blank"><button class="newsearchbutton">Google Forms</button></a><br>
+		<button onclick="openGoogleForms()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+		<button onclick="closeGoogleForms()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+				</li>
+
+	<li><a href="https://itsmcb.github.io/mSchool0.5/Rander/" target="_blank"><button class="newsearchbutton">Rander</button></a><br>
+		<button onclick="openRander()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+		<button onclick="closeRander()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+				</li>
+
+	<li><a href="https://itsmcb.github.io/mSchool0.5/Mozilla%20Rich%20Text%20Editor%20for%20mSchool" target="_blank"><button class="newsearchbutton">Mozilla Rich Text Editor</button></a><br>
+		<button onclick="openMozillaRTE()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+		<button onclick="closeMozillaRTE()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+				</li>
+
+	<li><a href="https://earth.google.com/web/" target="_blank"><button class="newsearchbutton">Google Earth</button></a><br>
+		<button onclick="openGoogleEarth()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+		<button onclick="closeGoogleEarth()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+				</li>
+
+	<li><a href="http://www.cnn.com/cnn10" target="_blank"><button class="newsearchbutton">CNN10</button></a><br>
+		<button onclick="openCnn10()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+		<button onclick="closeCnn10()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+				</li>
+
+		<li><a href="https://ps.d64.org/public/" target="_blank"><button class="newsearchbutton">Powerschool</button></a><br>
+			<button onclick="openPowerSchool()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+			<button onclick="closePowerSchool()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+					</li>
+
+		<li><a href="http://classroom.google.com" target="_blank"><button class="newsearchbutton">Lincol Student Portal</button></a><br>
+			<button onclick="openLMSStudentPortal()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+			<button onclick="closeLMSStudentPortal()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+					</li>
+
+		</div>
+
+<h2>&nbsp; mSchool System Search </h2>
+    </ul>
+    </div>
+
+
+
+  </div>
+</div>
