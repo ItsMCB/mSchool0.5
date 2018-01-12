@@ -377,6 +377,14 @@ function hwoff() {
 <button onclick="openConnectEDmath()" class="tooltipbutton" id="showhome">Open</button><br>
 <button onclick="closeConnectEDmath()" class="tooltipbutton" id="hidehome">Close</button><br>
 	  </div>
+	
+	<!-- Power School App -->
+<a href="https://ps.d64.org/public/" target="_blank"><div class="tooltip"><img src="https://www.powerschool.com/wp-content/uploads/2016/12/PowerSchool-Logo-Vertical-300x300-01.png" alt="Power School Login" height="102" width="162"></a>
+  <span class="tooltiptext">
+    <h1 class="ttt"> Power School </h1>
+<button onclick="openPowerSchool()" class="tooltipbutton" id="showhome">Open</button><br>
+<button onclick="closePowerSchool()" class="tooltipbutton" id="hidehome">Close</button><br>
+	  </div>
 
 </div>
 
@@ -460,6 +468,17 @@ Your browser does not support the audio element.
       ConnectEDmathWindow.close();
   }
   </script>
+	<script>
+var PowerSchoolWindow;
+
+function openPowerSchool() {
+	PowerSchoolWindow = window.open('https://ps.d64.org/public/', '_blank', 'toolbar=0,location=0,menubar=0');
+}
+
+function closePowerSchool() {
+	PowerSchoolWindow.close();
+}
+</script>
 	
 	
 <!--2Do Save aka OAN save -->
