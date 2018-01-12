@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -216,6 +217,98 @@ body {
 <iframe  frameBorder="0" scrolling="no" src="https://itsmcb.github.io/mSchool0.5/timedate" width="95" height="50"></iframe>
 	  <button class="bgaudiobutton" onclick="openFeedback()">FEEDBACK</button>
 	</div>
+    <style>
+.lefixed{
+    position:fixed;
+    top:0px;
+    right:0px;
+    width:100px;
+}
+</style>
+<div class="lefixed">
+
+<style>
+.hwbutton {
+    float: right;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: 3px solid #008CBA;
+    border-radius: 8px;
+   }
+
+.clearxx {
+    clear: left;
+}
+</style>
+<style>
+.yehwbuttonshowhidebutton {
+    float: right;
+    width: 70px;
+    height: 145px;
+    margin: 10px;
+    border: 3px solid #008CBA;
+    border-radius: 8px;
+    </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#hwlehide").click(function(){
+        $(".hwbutton").hide();
+    });
+    $("#hwleshow").click(function(){
+        $(".hwbutton").show();
+    });
+});
+</script>
+<style>
+#yeoverlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+</style>
+<script>
+function hwon() {
+    document.getElementById("yeoverlay").style.display = "block";
+}
+
+function hwoff() {
+    document.getElementById("yeoverlay").style.display = "none";
+}
+</script>
+	<div id="yeoverlay">
+  <div id="text">
+  <br><br><br>
+<center>
+<button style="cursor: alias;" class="bgaudiobutton" onclick="hwoff()" style="color:white;font-size:20px;"> Close </button>
+<iframe height="600px" width="1450px" src="https://itsmcb.github.io/mSchool0.5/2Do" name="sys_search_frame"></iframe>
+</center>
+</div></div>
+
+<div class="yehwbuttonshowhidebutton">
+<img style="cursor: pointer;" id="hwleshow" style="border-radius: 0px;" src="https://i.imgur.com/bZK7Hwx.png" alt="Paris" width="70" height="70">
+<img style="cursor: pointer;" id="hwlehide" style="border-radius: 0px;" src="https://i.imgur.com/0HwDusi.png" alt="Paris" width="70" height="70">
+</div>
+<br><br><br><br><br><br><br>
+<div class="hwbutton">
+<img style="cursor: alias;" onclick="hwon()" style="border-radius: 4px;" src="https://i.imgur.com/Oz3GXym.png" alt="Paris" width="100" height="100">
+
+</div>
+<div class="clearxx"></div>
+
+</div>
+
+
 
 
 
@@ -243,9 +336,9 @@ body {
 <button onclick="openBing()">Bing</button></span>
 </div>
 <!-- 2Do App -->
-<div class="tooltip"><a href="https://itsmcb.github.io/mSchool0.5/2Do" target="search_iframe"><img src="https://i.imgur.com/8w1i4Vn.png" alt="OAN Application Icon" height="102" width="162" onclick="openOAN()"></a>
+<div class="tooltip"><a href="https://itsmcb.github.io/mSchool0.5/2Do" target="search_iframe"><img src="https://i.imgur.com/Oz3GXym.png" alt="Homework Icon" height="102" width="162" onclick="openOAN()"></a>
 <span class="tooltiptext">
-    <h1 class="ttt"> 2Do </h1>
+    <h1 class="ttt"> Homework </h1>
 	<a href="https://itsmcb.github.io/mSchool0.5/2Do" target="search_iframe">
 
 		<button class="tooltipbutton" id="showhome">Open</button><br></a>
