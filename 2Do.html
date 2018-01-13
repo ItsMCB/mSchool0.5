@@ -95,25 +95,308 @@ document.getElementById("edit").innerHTML = localStorage.userEdits;
 <center>
 <h1 class="HelloWorld"> Homework <h1>
 </center>
+
+
+
+
+<div class="homework">
+
 <!-- E. T. B. MCB -->
 <div class="ct" id="edit" contenteditable="true">
-	<p> Major Projects: </p>
+	<p id="txtmp"> Major Projects: </p>
 	<hr>
-<p>Language Arts: </p>
+<p id="txtla">Language Arts: </p>
 	<hr>
-<p>Mathematics: </p>
+<p id="txtmm">Mathematics: </p>
 	<hr>
-<p>Science: </p>
+<p id="txtsi">Science: </p>
 	<hr>
-<p>Social Studies/History: </p>
+<p id="txtss">Social Studies/History: </p>
 	<hr>
-<p>Elective 1: </p>
-<p>Elective 2: </p>
-<p>Elective 3: </p>
-<p>Elective 4: </p>
+<p id="txteq">Elective 1: </p>
+	<hr>
+<p id="txtew">Elective 2: </p>
+	<hr>
+<p id="txtee">Elective 3: </p>
+	<hr>
+<p id="txter">Elective 4: </p>
+	<hr>
 </div>
 <input type="button" value="Save" class="clickme" onclick="saveEdits()"/>
 <div id="update"><p> - Edit the text and click to save for next time</p></div>
 	<br><br><br><br><br><br><br><br><br><br>
+    </div>
+<style>
+.homework {
+	float:right;
+    width:900px;
+}
+</style>
+
+
+
+<div class="lefixed">
+
+<style>
+.hwbutton {
+    float: left;
+    width: 300px;
+    height: 100px;
+    margin: 10px;
+    border: 3px solid #008CBA;
+    border-radius: 8px;
+   }
+
+.clearxx {
+    clear: left;
+}
+</style>
+
+<!-- Markdown for "Major Projects" -->
+<div class="hwbutton">
+<center>
+<p style="color:white; font-size:20px;"> Major Projects </p>
+<button type="button" class="def" onclick="deftxtmp()">Reset</button>
+<button type="button" class="def" onclick="finishtxtmp()">Finish</button>
+<button type="button" class="def" onclick="unfinishtxtmp()">Not Finished</button>
+</center>
+</div>
+
+<script>
+function deftxtmp() {
+    document.getElementById("txtmp").style.color = "white";
+}
+function finishtxtmp() {
+    document.getElementById("txtmp").style.color = "blue";
+}
+function unfinishtxtmp() {
+    document.getElementById("txtmp").style.color = "red";
+}
+</script>
+
+</div>
+<div class="clearxx"></div>
+
+</div>
+
+<!-- Markdown for "LA" -->
+<div class="hwbutton">
+<center>
+<p style="color:white; font-size:20px;"> Language Arts </p>
+<button type="button" class="def" onclick="deftxtla()">Reset</button>
+<button type="button" class="def" onclick="finishtxtla()">Finish</button>
+<button type="button" class="def" onclick="unfinishtxtla()">Not Finished</button>
+</center>
+</div>
+
+<script>
+function deftxtla() {
+    document.getElementById("txtla").style.color = "white";
+}
+function finishtxtla() {
+    document.getElementById("txtla").style.color = "blue";
+}
+function unfinishtxtla() {
+    document.getElementById("txtla").style.color = "red";
+}
+</script>
+
+</div>
+<div class="clearxx"></div>
+
+</div>
+
+<!-- Markdown for "Math" -->
+<div class="hwbutton">
+<center>
+<p style="color:white; font-size:20px;"> Mathematics </p>
+<button type="button" class="def" onclick="deftxtmm()">Reset</button>
+<button type="button" class="def" onclick="finishtxtmm()">Finish</button>
+<button type="button" class="def" onclick="unfinishtxtmm()">Not Finished</button>
+</center>
+</div>
+
+<script>
+function deftxtmm() {
+    document.getElementById("txtmm").style.color = "white";
+}
+function finishtxtmm() {
+    document.getElementById("txtmm").style.color = "blue";
+}
+function unfinishtxtmm() {
+    document.getElementById("txtmm").style.color = "red";
+}
+</script>
+
+</div>
+<div class="clearxx"></div>
+
+</div>
+
+<!-- Markdown for "Science" -->
+<div class="hwbutton">
+<center>
+<p style="color:white; font-size:20px;"> Science </p>
+<button type="button" class="def" onclick="deftxtsi()">Reset</button>
+<button type="button" class="def" onclick="finishtxtsi()">Finish</button>
+<button type="button" class="def" onclick="unfinishtxtsi()">Not Finished</button>
+</center>
+</div>
+
+<script>
+function deftxtsi() {
+    document.getElementById("txtsi").style.color = "white";
+}
+function finishtxtsi() {
+    document.getElementById("txtsi").style.color = "blue";
+}
+function unfinishtxtsi() {
+    document.getElementById("txtsi").style.color = "red";
+}
+</script>
+
+</div>
+<div class="clearxx"></div>
+
+</div>
+
+<!-- Markdown for "Social Studies" -->
+<div class="hwbutton">
+<center>
+<p style="color:white; font-size:20px;"> Social Studies </p>
+<button type="button" class="def" onclick="deftxtss()">Reset</button>
+<button type="button" class="def" onclick="finishtxtss()">Finish</button>
+<button type="button" class="def" onclick="unfinishtxtss()">Not Finished</button>
+</center>
+</div>
+
+<script>
+function deftxtss() {
+    document.getElementById("txtss").style.color = "white";
+}
+function finishtxtss() {
+    document.getElementById("txtss").style.color = "blue";
+}
+function unfinishtxtss() {
+    document.getElementById("txtss").style.color = "red";
+}
+</script>
+
+</div>
+<div class="clearxx"></div>
+
+</div>
+
+<!-- Markdown for "Elective 1" -->
+<div class="hwbutton">
+<center>
+<p style="color:white; font-size:20px;"> Elective 1 </p>
+<button type="button" class="def" onclick="deftxteq()">Reset</button>
+<button type="button" class="def" onclick="finishtxteq()">Finish</button>
+<button type="button" class="def" onclick="unfinishtxteq()">Not Finished</button>
+</center>
+</div>
+
+<script>
+function deftxteq() {
+    document.getElementById("txteq").style.color = "white";
+}
+function finishtxteq() {
+    document.getElementById("txteq").style.color = "blue";
+}
+function unfinishtxteq() {
+    document.getElementById("txteq").style.color = "red";
+}
+</script>
+
+</div>
+<div class="clearxx"></div>
+
+</div>
+
+<!-- Markdown for "Elective 2" -->
+<div class="hwbutton">
+<center>
+<p style="color:white; font-size:20px;"> Elective 2 </p>
+<button type="button" class="def" onclick="deftxtew()">Reset</button>
+<button type="button" class="def" onclick="finishtxtew()">Finish</button>
+<button type="button" class="def" onclick="unfinishtxtew()">Not Finished</button>
+</center>
+</div>
+
+<script>
+function deftxtew() {
+    document.getElementById("txtew").style.color = "white";
+}
+function finishtxtew() {
+    document.getElementById("txtew").style.color = "blue";
+}
+function unfinishtxtew() {
+    document.getElementById("txtew").style.color = "red";
+}
+</script>
+
+</div>
+<div class="clearxx"></div>
+
+</div>
+
+<!-- Markdown for "Elective 3" -->
+<div class="hwbutton">
+<center>
+<p style="color:white; font-size:20px;"> Elective 3 </p>
+<button type="button" class="def" onclick="deftxtee()">Reset</button>
+<button type="button" class="def" onclick="finishtxtee()">Finish</button>
+<button type="button" class="def" onclick="unfinishtxtee()">Not Finished</button>
+</center>
+</div>
+
+<script>
+function deftxtee() {
+    document.getElementById("txtee").style.color = "white";
+}
+function finishtxtee() {
+    document.getElementById("txtee").style.color = "blue";
+}
+function unfinishtxtee() {
+    document.getElementById("txtee").style.color = "red";
+}
+</script>
+
+</div>
+<div class="clearxx"></div>
+
+</div>
+
+<!-- Markdown for "Elective 4" -->
+<div class="hwbutton">
+<center>
+<p style="color:white; font-size:20px;"> Elective 4 </p>
+<button type="button" class="def" onclick="deftxter()">Reset</button>
+<button type="button" class="def" onclick="finishtxter()">Finish</button>
+<button type="button" class="def" onclick="unfinishtxter()">Not Finished</button>
+</center>
+</div>
+
+<script>
+function deftxter() {
+    document.getElementById("txter").style.color = "white";
+}
+function finishtxter() {
+    document.getElementById("txter").style.color = "blue";
+}
+function unfinishtxter() {
+    document.getElementById("txter").style.color = "red";
+}
+</script>
+
+</div>
+<div class="clearxx"></div>
+
+</div>
+
+
+
+
 </body>
 </html>
