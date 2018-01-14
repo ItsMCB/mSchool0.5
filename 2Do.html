@@ -13,7 +13,7 @@
   gtag('config', 'UA-112404838-1');
 </script>
 
-	
+
 	<link rel="apple-touch-icon" sizes="57x57" href="/mSchool0.5/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/mSchool0.5/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="/mSchool0.5/apple-icon-72x72.png">
@@ -31,7 +31,7 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/mSchool0.5/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-	
+
 <style>
 body { background-color: black; } div { color: white; font-size: 25px;} .ct { background-color: grey; color: white; font-size: 25px;}
 </style>
@@ -53,7 +53,7 @@ body { background-color: black; } div { color: white; font-size: 25px;} .ct { ba
 .HelloWorld  {
 
   color:	#D5AD6D; /*if no support for background-clip*/
-	
+
 	background: -webkit-linear-gradient(transparent, transparent),
              -webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
 	background: -o-linear-gradient(transparent, transparent);
@@ -394,31 +394,16 @@ function unfinishtxter() {
 <div class="clearxx"></div>
 
 </div>
-<button onClick="clearListCookies()"> Clear Save DATA </button>
+
+<button onclick="clearall()"> Clear Save DATA </button>
 <script>
-function clearListCookies()
-{   
- var cookies = document.cookie.split(";");
- for (var i = 0; i < cookies.length; i++)
-  {   
-    var spcook =  cookies[i].split("=");
-    deleteCookie(spcook[0]);
-  }
-  function deleteCookie(userEdits)
-   {
-    var d = new Date();
-    d.setDate(d.getDate() - 1);
-    var expires = ";expires="+d;
-    var name=userEdits;
-    //alert(name);
-    var value="";
-    document.cookie = name + "=" + value + expires + "; path=/acc/html";                    
-}
+function clearall(){
+  localStorage.clear();
 window.location = "https://itsmcb.github.io/mSchool0.5/"; // TO REFRESH THE PAGE
 }
 </script>
 
-
+<br><br><br><br><br><br><br><br><br>
 
 
 </body>
