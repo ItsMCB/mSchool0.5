@@ -90,8 +90,9 @@ localStorage.userEdits = userVersion;
 
 //write a confirmation to the user
 document.getElementById("update").innerHTML="Edits saved!";
-wait(7000);
+setTimeout(function(){
 document.getElementById("update").innerHTML="-  Click "Save" to save for next time";
+    }, 5000);
 	
 }
 </script>
