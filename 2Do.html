@@ -90,10 +90,14 @@ localStorage.userEdits = userVersion;
 
 //write a confirmation to the user
 document.getElementById("update").innerHTML="Edits saved!";
-setTimeout(function(){
-document.getElementById("update").innerHTML="-  Click "Save" to save for next time";
-    }, 5000);
 	
+}
+</script>
+<script>
+function updateSAVEre() {
+//write a confirmation to the user
+document.getElementById("update").innerHTML="-  Click "Save" to save for next time";
+
 }
 </script>
 <script>
@@ -114,8 +118,8 @@ document.getElementById("edit").innerHTML = localStorage.userEdits;
 <center>
 <div style="position:fixed; top:2%; right:2%;z-index:105;width:430px;height: 160px;margin: 10px;border: 3px solid #008CBA;border-radius: 8px;background:linear-gradient(#2B2B2B,#292421);">
 <p style="font-size:5px;">.</p>
-<input type="button" value="Save" class="clickme" onclick="saveEdits()"/>
-<input type="button" value="Options" class="clickme" onclick="hwon()"/>
+<input type="button" value="Save" class="clickme" onclick="saveEdits();setTimeout(updateSAVEre, 3000);"/>
+<input type="button" value="Options" class="clickme" onclick="hwon();"/>
 <div id="update"><p> -  Click "Save" to save for next time</p></div>
 </div>
 
