@@ -11,7 +11,7 @@
     databaseURL: "https://mschool-lexeditionx.firebaseio.com",
     projectId: "mschool-lexeditionx",
     storageBucket: "mschool-lexeditionx.appspot.com",
-    messagingSenderId: "244802703659"
+    messagingSenderId: "244802703659" 
   };
   firebase.initializeApp(config);
 </script>
@@ -90,7 +90,9 @@ localStorage.userEdits = userVersion;
 
 //write a confirmation to the user
 document.getElementById("update").innerHTML="Edits saved!";
-
+wait(7000);
+document.getElementById("update").innerHTML="-  Click "Save" to save for next time";
+	
 }
 </script>
 <script>
