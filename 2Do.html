@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +21,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-112404838-1');
 </script>
 
@@ -62,11 +60,8 @@ body { background: linear-gradient(#2F4F4F	, #5F9F9F); } div { color: white; fon
     cursor: pointer;
 }
 @import url(https://fonts.googleapis.com/css?family=Arvo);
-
 .HelloWorld  {
-
   color:	#D5AD6D; /*if no support for background-clip*/
-
 	background: -webkit-linear-gradient(transparent, transparent),
              -webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
 	background: -o-linear-gradient(transparent, transparent);
@@ -74,29 +69,21 @@ body { background: linear-gradient(#2F4F4F	, #5F9F9F); } div { color: white; fon
   -webkit-text-fill-color: transparent;
   font-size: 50px;
 }
-
-
 </style>
 <script type="text/javascript">
 function saveEdits() {
-
 //get the editable element
 var editElem = document.getElementById("edit");
-
 //get the edited element content
 var userVersion = editElem.innerHTML;
-
 //save the content to local storage
 localStorage.userEdits = userVersion;
-
 //write a confirmation to the user
 document.getElementById("update").innerHTML="Edits saved!";
-
 }
 </script>
 <script>
 function checkEdits() {
-
 //find out if the user has previously saved edits
 if(localStorage.userEdits!=null)
 document.getElementById("edit").innerHTML = localStorage.userEdits;
@@ -104,40 +91,16 @@ document.getElementById("edit").innerHTML = localStorage.userEdits;
 </script>
 </head>
 
-<body onload="hwoff()" onload="checkEdits()">
+<body onload="checkEdits()">
 <center>
 <h1 class="HelloWorld"> Homework <h1>
 </center>
 
 <center>
-<div style="position:fixed; top:2%; right:2%;z-index:105;width:430px;height: 160px;margin: 10px;border: 3px solid #008CBA;border-radius: 8px;background:linear-gradient(#2B2B2B,#292421);">
-<p style="font-size:5px;">.</p>
+<div style="position:fixed; top:2%; right:2%;z-index:105;width:300px;height: 120px;margin: 10px;border: 3px solid #008CBA;border-radius: 8px;background:linear-gradient(#2B2B2B,#292421);">
 <input type="button" value="Save" class="clickme" onclick="saveEdits()"/>
-<input type="button" value="Options" class="clickme" onclick="hwon()"/>
-<div id="update"><p> -  Click "Save" to save for next time</p></div>
+<div id="update"><p> -  Click to save for next time</p></div>
 </div>
-
-<div id="yeoverlay">
-  <div id="text" >
-  <br><br>
-<button class="clickme" style="cursor: alias;" class="bgaudiobutton" onclick="hwoff()" style="color:white;font-size:20px;"> Close Options Menu </button><hr>
-<div style="position:fixed; top:2%; right:2%;z-index:105;width:430px;height: 160px;margin: 10px;border: 3px solid #008CBA;border-radius: 8px;background:linear-gradient(#2B2B2B,#292421);" class="hwbutton">
-<center>
-<p style="color:white; font-size:20px;"> Options </p>
-<button type="button" style="background-color: #008CBA; /* Blue */border: none;color: white;
-    padding: 4px 8px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;"class="embolden">Bold</button><br>
-<input type="text" id="url" size="30" value="http://google.com/">
-<input type="button" value="Link" class="def"onclick="createLink()">
-</center>
-</div>
-
-</div></div>
 </center>
 <style>
 .def  {
@@ -204,7 +167,6 @@ background-color: #008CBA; /* Blue */
     border: 3px solid #008CBA;
     border-radius: 8px;
    }
-
 .clearxx {
     clear: left;
 }
@@ -463,96 +425,6 @@ window.location = "https://itsmcb.github.io/mSchool0.5/2Do"; // TO REFRESH THE P
 
 <br><br><br><br><br><br><br><br><br>
 <p></p><br><br><br><br><br><br>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-    $("#hwlehide").click(function(){
-        $(".hwbutton").hide();
-    });
-    $("#hwleshow").click(function(){
-        $(".hwbutton").show();
-    });
-});
-</script>
-<style>
-#yeoverlay {
-	color:white; 
-	font-size:20px;
-    z-index: 2;
-    cursor: pointer;
-}
-
-</style>
-<script>
-function hwon() {
-    document.getElementById("yeoverlay").style.display = "block";
-}
-
-function hwoff() {
-    document.getElementById("yeoverlay").style.display = "none";
-}
-</script>
-
-<!-- Script to copy and paste from url -->
-
-<script>
-function saveSelection() {
-    if (window.getSelection) {
-        sel = window.getSelection();
-        if (sel.getRangeAt && sel.rangeCount) {
-            var ranges = [];
-            for (var i = 0, len = sel.rangeCount; i < len; ++i) {
-                ranges.push(sel.getRangeAt(i));
-            }
-            return ranges;
-        }
-    } else if (document.selection && document.selection.createRange) {
-        return document.selection.createRange();
-    }
-    return null;
-}
-
-function restoreSelection(savedSel) {
-    if (savedSel) {
-        if (window.getSelection) {
-            sel = window.getSelection();
-            sel.removeAllRanges();
-            for (var i = 0, len = savedSel.length; i < len; ++i) {
-                sel.addRange(savedSel[i]);
-            }
-        } else if (document.selection && savedSel.select) {
-            savedSel.select();
-        }
-    }
-}
-
-function createLink() {
-    // There's actually no need to save and restore the selection here. This is just an example.
-    var savedSel = saveSelection();
-    var url = document.getElementById("url").value;
-    restoreSelection(savedSel);
-    document.execCommand("CreateLink", false, url);
-}
-
-</script>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-
-<script>
-jQuery(function($) {
-    $('.embolden').click(function(){
-        var highlight = window.getSelection();  
-        var span = '<span class="bold">' + highlight + '</span>';
-        var text = $('.ct').html();
-        $('.ct').html(text.replace(highlight, span));
-    });
-});
-</script>
-<style>
-.bold {
-    font-weight: bold;
-}
-</style>
 
 
 
