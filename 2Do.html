@@ -144,7 +144,7 @@ class="emitalicen">Italic</button>
 
 <button type="button" style="background-color: #008CBA; /* Blue */border: none;color: white;padding: 4px 8px;
 text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;"
-class="emobliqueen">Oblique</button>
+class="emunderlineen">Underline</button>
 
 
 
@@ -588,9 +588,9 @@ jQuery(function($) {
 </script>
 <script>
 jQuery(function($) {
-    $('.emobliqeen').click(function(){
+    $('.emunderlineen').click(function(){
         var highlight = window.getSelection();  
-        var span = '<span class="oblique">' + highlight + '</span>';
+        var span = '<span class="underline">' + highlight + '</span>';
         var text = $('.ct').html();
         $('.ct').html(text.replace(highlight, span));
     });
@@ -609,9 +609,7 @@ jQuery(function($) {
     font-style: italic;
 }
 
-.oblique {
-    font-style: oblique;
-}
+.underline { text-decoration: underline white; }
 </style>
 
 
