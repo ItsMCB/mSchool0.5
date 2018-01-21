@@ -23,12 +23,12 @@
 
 
 	<li><a href="https://itsmcb.github.io/mSchool0.5/2Do" target="_blank"><button class="newsearchbutton">2Do</button></a><br>
-		<button onclick="openTwoDo" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+		<button onclick="openTwoDo()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
 		<button onclick="closeTwoDo()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
 				</li>
 
 	<li><a href="https://mail.google.com/" target="_blank"><button class="newsearchbutton">Mail</button></a><br>
-		<button onclick="openMAIL" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+		<button onclick="openMAIL()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
 		<button onclick="closeMAIL()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
 				</li>
 
@@ -96,6 +96,18 @@
 			<button onclick="openLMSStudentPortal()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
 			<button onclick="closeLMSStudentPortal()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
 					</li>
+                    
+        <li><a href="https://www.khanacademy.org/" target="_blank"><button class="newsearchbutton">Khan Academy</button></a><br>
+			<button onclick="openKhanAcademy()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+			<button onclick="closeKhanAcademy()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+					</li>
+                    
+        <li><a href="https://pixlr.com/editor/" target="_blank"><button class="newsearchbutton">Pixlr</button></a><br>
+			<button onclick="openPixlr()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+			<button onclick="closePixlr()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+					</li>
+                    
+                    
 
 		</div>
 
@@ -278,5 +290,53 @@ function openLMSStudentPortal() {
 
 function closeLMSStudentPortal() {
 	LMSStudentPortalWindow.close();
+}
+</script>
+
+<script>
+var PixlrWindow;
+
+function openPixlr() {
+	PixlrWindow = window.open('https://pixlr.com/editor/', '_blank', 'toolbar=0,location=0,menubar=0');
+}
+
+function closePixlr() {
+	PixlrWindow.close();
+}
+</script>
+
+<script>
+var KhanAcademyWindow;
+
+function openKhanAcademy() {
+	KhanAcademyWindow = window.open('https://www.khanacademy.org/', '_blank', 'toolbar=0,location=0,menubar=0');
+}
+
+function closeKhanAcademy() {
+	KhanAcademyWindow.close();
+}
+</script>
+
+<script>
+var TwoDoWindow;
+
+function openTwoDo() {
+	TwoDoWindow = window.open('https://itsmcb.github.io/mSchool0.5/2Do', '_blank', 'toolbar=0,location=0,menubar=0');
+}
+
+function closeTwoDo() {
+	TwoDoWindow.close();
+}
+</script>
+
+<script>
+var MozillaRTEWindow;
+
+function openMozillaRTE() {
+	MozillaRTEWindow = window.open('https://itsmcb.github.io/mSchool0.5/Mozilla%20Rich%20Text%20Editor%20for%20mSchool', '_blank', 'toolbar=0,location=0,menubar=0');
+}
+
+function closeMozillaRTE() {
+	MozillaRTEWindow.close();
 }
 </script>
