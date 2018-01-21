@@ -130,14 +130,26 @@ document.getElementById("edit").innerHTML = localStorage.userEdits;
 <div style="position:fixed; top:2%; right:2%;z-index:105;width:430px;height: 160px;margin: 10px;border: 3px solid #008CBA;border-radius: 8px;background:linear-gradient(#2B2B2B,#292421);" class="hwbutton">
 <center>
 <p style="color:white; font-size:20px;"> Options </p>
-<button type="button" style="background-color: #008CBA; /* Blue */border: none;color: white;
-    padding: 4px 8px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;"class="embolden">Bold</button><br>
+<button type="button" style="background-color: #008CBA; /* Blue */border: none;color: white;padding: 4px 8px;
+text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;"
+class="emnormalen">Normal</button>
+
+<button type="button" style="background-color: #008CBA; /* Blue */border: none;color: white;padding: 4px 8px;
+text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;"
+class="embolden">Bold</button>
+
+<button type="button" style="background-color: #008CBA; /* Blue */border: none;color: white;padding: 4px 8px;
+text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;"
+class="emitalicen">Italic</button>
+
+<button type="button" style="background-color: #008CBA; /* Blue */border: none;color: white;padding: 4px 8px;
+text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;"
+class="emobliqueen">Oblique</button>
+
+
+
+
+<br>
 <input type="text" id="url" size="30" value="http://google.com/">
 <input type="button" value="Link" class="def"onclick="createLink()">
 </center>
@@ -554,12 +566,53 @@ jQuery(function($) {
     });
 });
 </script>
+<script>
+jQuery(function($) {
+    $('.emitalicen').click(function(){
+        var highlight = window.getSelection();  
+        var span = '<span class="italic">' + highlight + '</span>';
+        var text = $('.ct').html();
+        $('.ct').html(text.replace(highlight, span));
+    });
+});
+</script>
+<script>
+jQuery(function($) {
+    $('.emnormalen').click(function(){
+        var highlight = window.getSelection();  
+        var span = '<span class="normal">' + highlight + '</span>';
+        var text = $('.ct').html();
+        $('.ct').html(text.replace(highlight, span));
+    });
+});
+</script>
+<script>
+jQuery(function($) {
+    $('.emobliqeen').click(function(){
+        var highlight = window.getSelection();  
+        var span = '<span class="oblique">' + highlight + '</span>';
+        var text = $('.ct').html();
+        $('.ct').html(text.replace(highlight, span));
+    });
+});
+</script>
 <style>
 .bold {
     font-weight: bold;
 }
-</style>
+.normal {
+    font-style: normal;
+    
+}
 
+.italic {
+    font-style: italic;
+}
+
+.oblique {
+    font-style: oblique;
+}
+</style>
 
 
 </body>
