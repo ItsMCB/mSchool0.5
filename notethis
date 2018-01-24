@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Note This</title>
+</head>
+<body>
+<center>
+<h1> Note This </h1>
+</center>
+
+<div class="module cap"><br><br>
+<center><iframe height="220" width="225" src="https://bing.com"></iframe></center>
+</div>
+
+<style>
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900);
+
+.module {
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.0),
+      rgba(0, 0, 0, 0.0)
+    ),
+    url(https://upload.wikimedia.org/wikipedia/commons/e/e5/Post-it-note-transparent.png);
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  margin: 10px 0 0 10px;
+  position: relative;
+  float: left;
+  
+}
+
+.top h2 {
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+
+.lr p {
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  margin: 0;
+}
+
+.mid h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  color: black;
+  text-transform: uppercase;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 2rem;
+  transform: translate(-50%, -50%);
+}
+
+.cap p {
+  padding: 20px;
+  color: black;
+  font: 12px Monaco, Mono-Space;
+  margin: 0;
+}
+p {
+height: 25px !important;
+width: 240px !important;
+font-size: 14px !important;
+margin-left: 10px !important;
+margin-top: 10px !important;
+}
+</style>
+<style>
+h1 {
+	color:black;
+    font-size:30px;
+}
+</style>
+</body>
+</html>
