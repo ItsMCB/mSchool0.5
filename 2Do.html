@@ -45,7 +45,7 @@
 <meta name="theme-color" content="#ffffff">
 
 <style>
-body { background: linear-gradient(#2F4F4F	, #5F9F9F); } div { color: white; font-size: 25px;} .ct { background-color: grey; color: white; font-size: 25px;}
+body {background-image: url("https://www.dropbox.com/s/2lsrazglk6dloor/pexels-photo-355465.jpeg?raw=1");} div { color: white; font-size: 25px;} .ct { background:linear-gradient(#2B2B2B,#292421);border: 3px solid #008CBA; color: white; font-size: 25px;}
 </style>
 <style>
 .clickme {
@@ -165,8 +165,11 @@ background-color: #008CBA; /* Blue */
     margin: 4px 2px;
     cursor: pointer;
 }
+updateCSS {
+	font-size:1px;
+}
 </style>
-<div id="update"><p> -  Click "Save" to save for next time</p></div>
+<div class="updateCSS" id="update"><p> -  Click "Save" to save for next time</p></div>
 </div>
 
 
@@ -217,6 +220,7 @@ background-color: #008CBA; /* Blue */
     margin: 10px;
     border: 3px solid #008CBA;
     border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.79);
    }
 
 .clearxx {
@@ -467,7 +471,7 @@ function unfinishtxter() {
 
 </div>
 
-<button onclick="clearall()"> Clear Save DATA </button>
+<button class="clearsavedatabutton" onclick="clearall()"> Clear Save DATA </button>
 <script>
 function clearall(){
   localStorage.clear();
@@ -618,6 +622,22 @@ function startAutoSavingsa() {
     setInterval(function(){document.getElementById("update").innerHTML="Please wait while we save your work...";}, 4000);
 }
 </script>
+<style>
+.clearsavedatabutton {
+    background-color: #f44336; /* Green */
+    border: none;
+    color: white;
+    padding: 9px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+   
+}
+</style>
 
 </body>
 </html>
