@@ -118,15 +118,12 @@ document.getElementById("edit").innerHTML = localStorage.userEdits;
 <center>
 <div style="position:fixed; top:2%; right:2%;z-index:105;width:430px;height: 160px;margin: 10px;border: 3px solid #008CBA;border-radius: 8px;background:linear-gradient(#2B2B2B,#292421);">
 <p style="font-size:5px;">.</p>
-<input type="button" value="Save" class="clickme" onclick="saveEdits();setTimeout(updateSAVEre, 3000);"/>
 <input type="button" value="Options" class="clickme" onclick="hwon();"/>
-<div id="update"><p> -  Click "Save" to save for next time</p></div>
-</div>
+
 
 <div id="yeoverlay">
   <div id="text" >
   <br><br>
-<button class="clickme" style="cursor: alias;" class="bgaudiobutton" onclick="hwoff()" style="color:white;font-size:20px;"> Close Options Menu </button><hr>
 <div style="position:fixed; top:2%; right:2%;z-index:105;width:430px;height: 160px;margin: 10px;border: 3px solid #008CBA;border-radius: 8px;background:linear-gradient(#2B2B2B,#292421);" class="hwbutton">
 <center>
 <p style="color:white; font-size:20px;"> Options </p>
@@ -146,12 +143,10 @@ class="emitalicen">Italic</button>
 text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;"
 class="emunderlineen">Underline</button>
 
-
-
-
 <br>
 <input type="text" id="url" size="30" value="http://google.com/">
 <input type="button" value="Link" class="def"onclick="createLink()">
+<button class="clickme" style="cursor: alias;" class="bgaudiobutton" onclick="hwoff()" style="color:white;font-size:20px;"> Close Options Menu </button>
 </center>
 </div>
 
@@ -171,7 +166,8 @@ background-color: #008CBA; /* Blue */
     cursor: pointer;
 }
 </style>
-
+<div id="update"><p> -  Click "Save" to save for next time</p></div>
+</div>
 
 
 
