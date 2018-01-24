@@ -110,7 +110,7 @@ document.getElementById("edit").innerHTML = localStorage.userEdits;
 </script>
 </head>
 
-<body onload="hwoff();checkEdits();startAutoSaving()">
+<body onload="hwoff();checkEdits();startAutoSaving();startAutoSavingsa()">
 <center>
 <h1 class="HelloWorld"> Homework <h1>
 </center>
@@ -615,6 +615,11 @@ jQuery(function($) {
 <script>
 function startAutoSaving() {
     setInterval(function(){var editElem = document.getElementById("edit"); var userVersion = editElem.innerHTML; localStorage.userEdits = userVersion; document.getElementById("update").innerHTML="Edits saved!";}, 3000);
+}
+</script>
+<script>
+function startAutoSavingsa() {
+    setInterval(function(){document.getElementById("update").innerHTML="Please wait while we save your work...";}, 4000);
 }
 </script>
 
