@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -126,7 +127,10 @@ document.getElementById("edit").innerHTML = localStorage.userEdits;
   <br><br>
 <div style="position:fixed; top:2%; right:2%;z-index:105;width:430px;height: 160px;margin: 10px;border: 3px solid #008CBA;border-radius: 8px;background:linear-gradient(#2B2B2B,#292421);" class="hwbutton">
 <center>
-<p style="color:white; font-size:20px;"> Options </p>
+<input style="background-color: #008CBA; /* Blue */border: none;color: white;padding: 4px 8px;
+text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;"id='decrease' type="button" value="-">
+<input style="background-color: #008CBA; /* Blue */border: none;color: white;padding: 4px 8px;
+text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;"id='increase' type="button" value="+">
 <button type="button" style="background-color: #008CBA; /* Blue */border: none;color: white;padding: 4px 8px;
 text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;"
 class="emnormalen">Normal</button>
@@ -641,3 +645,30 @@ function startAutoSavingsa() {
 
 </body>
 </html>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  
+  var fontSize = 16;
+  
+  $('#decrease').click(function(){
+    if (fontSize > 6)
+      fontSize-=2;
+    document.execCommand("fontSize", false, "1");
+    resetFont();
+  });
+  
+  $('#increase').click(function(){
+    if (fontSize < 64)
+      fontSize+=2;
+    document.execCommand("fontSize", false, "1");
+    resetFont();
+  });
+  
+  function resetFont(){
+    $("font[size=1]").removeAttr("size").css("font-size", fontSize + "px");
+  }
+})
+</script>
