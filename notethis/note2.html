@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Note This - Note - mSchool Lex Edition</title>
+
+</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112404838-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112404838-1');
+</script>
+
+
+<style>div { color: white; font-size: 25px;} .ct {border:color: white; font-size: 20px;height:220; width:225;}
+</style>
+
+<script>
+function checkEditsNOTERGOV() {
+
+//find out if the user has previously saved edits
+if(localStorage.userEditsNOTERGOV!=null)
+document.getElementById("editNOTERGOV").innerHTML = localStorage.userEditsNOTERGOV;
+}
+</script>
+</head>
+
+<body onload="checkEditsNOTERGOV();startAutoSavingNOTERGOV();startAutoSavingsaNOTERGOV()">
+
+<style>
+.updateCSS {
+	font-size:12px;
+}
+</style>
+<div class="updateCSS" id="updateNOTERGOV"><p> -  Click "Save" to save for next time</p></div>
+</div>
+
+
+
+
+
+<!-- E. T. B. MCB -->
+<div style="height:220; width:225;" class="ct" id="editNOTERGOV" contenteditable="true">
+<p> Remove This Text <p>
+</div>
+
+
+
+<script>
+function startAutoSavingNOTERGOV() {
+    setInterval(function(){var editElemNOTERGOV = document.getElementById("editNOTERGOV"); var userVersionNOTERGOV = editElemNOTERGOV.innerHTML; localStorage.userEditsNOTERGOV = userVersionNOTERGOV; document.getElementById("updateNOTERGOV").innerHTML="Edits saved!";}, 3000);
+}
+</script>
+<script>
+function startAutoSavingsaNOTERGOV() {
+    setInterval(function(){document.getElementById("updateNOTERGOV").innerHTML="Please wait while we save your work...";}, 4000);
+}
+</script>
+
+</body>
+</html>
