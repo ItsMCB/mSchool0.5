@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Note This - Note - mSchool Lex Edition</title>
+
+</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112404838-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112404838-1');
+</script>
+
+
+<style>div { color: white; font-size: 25px;} .ct {border:color: white; font-size: 20px;height:220; width:225;}
+</style>
+
+<script>
+function checkEditsNOTERHOV() {
+
+//find out if the user has previously saved edits
+if(localStorage.userEditsNOTERHOV!=null)
+document.getElementById("editNOTERHOV").innerHTML = localStorage.userEditsNOTERHOV;
+}
+</script>
+</head>
+
+<body onload="checkEditsNOTERHOV();startAutoSavingNOTERHOV();startAutoSavingsaNOTERHOV()">
+
+<style>
+.updateCSS {
+	font-size:12px;
+}
+</style>
+<div class="updateCSS" id="updateNOTERHOV"><p> -  Click "Save" to save for next time</p></div>
+</div>
+
+
+
+
+
+<!-- E. T. B. MCB -->
+<div style="height:220; width:225;" class="ct" id="editNOTERHOV" contenteditable="true">
+<p> Remove This Text <p>
+</div>
+
+
+
+<script>
+function startAutoSavingNOTERHOV() {
+    setInterval(function(){var editElemNOTERHOV = document.getElementById("editNOTERHOV"); var userVersionNOTERHOV = editElemNOTERHOV.innerHTML; localStorage.userEditsNOTERHOV = userVersionNOTERHOV; document.getElementById("updateNOTERHOV").innerHTML="Edits saved!";}, 3000);
+}
+</script>
+<script>
+function startAutoSavingsaNOTERHOV() {
+    setInterval(function(){document.getElementById("updateNOTERHOV").innerHTML="Please wait while we save your work...";}, 4000);
+}
+</script>
+
+</body>
+</html>
