@@ -1,31 +1,153 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+    float: left;
+    border: 1px solid #008CBA;
+    background-color: #008CBA;
+    width: 15%;
+    height: 600px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    display: block;
+    background-color: inherit;
+    color: white;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #50A6C2;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+    background-color: #50A6C2;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 85%;
+    border-left: none;
+    height: 600px;
+    background: black; /* For browsers that do not support gradients */
+    background: linear-gradient(to right, blue, indigo);
+    color:white;
+}
+</style>
+</head>
+<body>
+
+
+<div class="tab">
+  <button class="tablinks" onclick="openPannel(event, 'About')" id="defaultOpen">About</button>
+  <button class="tablinks" onclick="openPannel(event, 'Credits')">Credits</button>
+  <button class="tablinks" onclick="openPannel(event, 'Versions')">Versions</button>
+  <button class="tablinks" onclick="openPannel(event, 'Settings')">Settings</button>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3 style="color:white;">About</h3>
 <style>
 #grad1 {
     height: 285px;
-    background: red; /* For browsers that do not support gradients */
-    background: linear-gradient(to right, blue, indigo); /* Standard syntax (must be last) */
+
     color: white;
 }
 h2 {
 color: white ;
 }
 </style>
-</head>
-<body>
-
 <div id="grad1">
 <center>
 <h1>mSchool</h1>
     <h2> Organization: District 64</h2>
     <h2> Edition: mSchool Lex Edition</h2>
     <h2> Recommended Specs:<br>512RAM</h2>
-<h6> Version 0.5.3.12 <h6>
+<h6> Version 0.6.1.0 <h6>
 
 </div>
 
-<p><strong>Note:</strong> Property of MCB.Pro & mSchoolOS </p>
+<p style="color:white;"><strong>Note:</strong> Property of MCB.Pro & mSchoolOS </p>
+
+</div>
+
+<div id="Credits" class="tabcontent">
+  <h3>Credits</h3>
+  <h4>mSchool Lex Edition was made by Martin Carl Bukoll</h4>
+  <h5> Beta Testers: </h5>
+  <style>
+ol li {
+    color: white;
+    font-size:20px;
+}
+
+</style>
+
+
+<ol>
+  <li>Martin Cark Bukoll - Dev & Beta Tester</li>
+  <li>Michael Magruder - Beta Tester</li>
+</ol>
+</div>
+
+<div id="Versions" class="tabcontent">
+  <h3>Versions</h3>
+  <h3> Running Version "0.6.1.0" of mSchool </h3>
+<br>
+<h4> Web - Version 1.0 </h4>
+<h4> Homework - Version 3.0 </h4>
+<h4> Mail - Version 1.0 </h4>
+<h4> QL Sys - Version 1.0 </h4>
+<h4> MCB Multimedia Services - Version 1.1 </h4>
+<h4> Swift Search mS Sys - Version 1.0 </h4>
+</div>
+
+<div id="Settings" class="tabcontent">
+
+
+
+
+
+
+</div>
+
+<script>
+function openPannel(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
 
 </body>
 </html>
