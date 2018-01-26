@@ -1,0 +1,67 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Note This - Note - mSchool Lex Edition</title>
+	
+</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112404838-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112404838-1');
+</script>
+
+
+<style>
+body {background-image: url("https://www.dropbox.com/s/2lsrazglk6dloor/pexels-photo-355465.jpeg?raw=1");} div { color: white; font-size: 25px;} .ct { background:linear-gradient(#2B2B2B,#292421);border: 3px solid #008CBA; color: white; font-size: 20px;height:220; width:225;}
+</style>
+
+<script>
+function checkEditsNOTERFOV() {
+
+//find out if the user has previously saved edits
+if(localStorage.userEditsNOTERFOV!=null)
+document.getElementById("editNOTERFOV").innerHTML = localStorage.userEditsNOTERFOV;
+}
+</script>
+</head>
+
+<body onload="checkEditsNOTERFOV();startAutoSavingNOTERFOV();startAutoSavingsaNOTERFOV()">
+
+<style>
+.updateCSS {
+	font-size:12px;
+}
+</style>
+<div class="updateCSS" id="updateNOTERFOV"><p> -  Click "Save" to save for next time</p></div>
+</div>
+
+
+
+
+
+<!-- E. T. B. MCB -->
+<div style="height:220; width:225;" class="ct" id="editNOTERFOV" contenteditable="true">
+<p> Remove This Text <p>
+</div>
+
+
+
+<script>
+function startAutoSavingNOTERFOV() {
+    setInterval(function(){var editElemNOTERFOV = document.getElementById("editNOTERFOV"); var userVersionNOTERFOV = editElemNOTERFOV.innerHTML; localStorage.userEditsNOTERFOV = userVersionNOTERFOV; document.getElementById("updateNOTERFOV").innerHTML="Edits saved!";}, 3000);
+}
+</script>
+<script>
+function startAutoSavingsaNOTERFOV() {
+    setInterval(function(){document.getElementById("updateNOTERFOV").innerHTML="Please wait while we save your work...";}, 4000);
+}
+</script>
+
+</body>
+</html>
