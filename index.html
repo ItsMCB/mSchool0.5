@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -331,7 +332,7 @@ function hwoff() {
 .png" width="100" height="100"></a>
 </div>
 <div class="hwbutton">
-<a href="https://itsmcb.github.io/mSchool0.5/notethis" target="search_iframe"><img style="cursor: alias;" style="border-radius: 4px;" src="https://i.imgur.com/lZp96kW.png" width="100" height="100"></a>
+<img style="cursor: alias;" onclick="onnt()" style="border-radius: 4px;" src="https://i.imgur.com/lZp96kW.png" width="100" height="100">
 </div>
 	
 <div class="clearxx"></div>
@@ -648,6 +649,7 @@ function fullscreenChange() {
 <iframe height="600px" width="1450px" src="https://itsmcb.github.io/mSchool0.5/search" name="sys_search_frame"></iframe>
 </center>
 
+
 	<script>
 function openGoogle() {
     window.open('http://www.google.com', '_blank', 'toolbar=0,location=0,menubar=0');
@@ -727,5 +729,153 @@ function checkCookie() {
     }
 }
 
+</script>
+<style>
+#overlaynt {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+</style>
+
+<div id="overlaynt">
+  <div id="text">
+<button style="cursor: alias;" class="bgaudiobutton" onclick="offnt()" style="color:white;font-size:20px;">Close</button>
+
+<button class="noteshowbuttonn1" style="background-color: #008CBA; border: none; color: white; padding: 5px 12px; text-align: center; text-decoration: none; display: inline-block; font-size: 10px; margin: 4px 2px; cursor: pointer; font-family: 'Audiowide', cursive;">Show</button>
+<hr>
+<iframe height="600px" width="1350px" src="https://itsmcb.github.io/mSchool0.5/notethis" name="sys_search_frame"></iframe>
+</div>
+</div>
+
+	  <script>
+function onnt() {
+    document.getElementById("overlaynt").style.display = "block";
+}
+
+function offnt() {
+    document.getElementById("overlaynt").style.display = "none";
+}
+</script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<!-- Hide on load script! n1-->
+<style>
+#notethisdivn1 {
+  display: none;
+}
+</style>
+<!-- Main Hide/Show Script! n1-->
+<script>
+$(document).ready(function(){
+    $(".notehidebuttonn1").click(function(){
+        $("#notethisdivn1").hide(1000);
+    });
+});
+</script>
+<script>
+$(document).ready(function(){
+    $(".noteshowbuttonn1").click(function(){
+        $("#notethisdivn1").show(1000);
+    });
+});
+</script>
+
+<!-- Script for draggable notethis note #1 -->
+<style>
+#notethisdivn1 {
+    position: absolute;
+    z-index: 9;
+    text-align: center;
+}
+
+#notethisdivn1header {
+    cursor: move;
+    z-index: 10;
+background-color: #008CBA;
+    color: #fff;
+
+}
+.module {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.0),
+      rgba(0, 0, 0, 0.0)
+    ),
+    url(https://upload.wikimedia.org/wikipedia/commons/e/e5/Post-it-note-transparent.png);
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  margin: 10px 0 0 10px;
+  position: relative;
+  float: left;
+
+}
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900);
+</style>
+
+
+<div id="notethisdivn1">
+  <div id="notethisdivn1header">Note 1</div>
+  <button style="background-color: #008CBA; border: none; color: white; padding: 5px 12px; text-align: center; text-decoration: none; display: inline-block; font-size: 10px; margin: 4px 2px; cursor: pointer; font-family: 'Audiowide', cursive;"class="notehidebuttonn1">Hide</button>
+<div class="module cap"><br><br>
+<iframe frameBorder="0" height="220" width="225" src="https://itsmcb.github.io/mSchool0.5/notethis/note1.html"></iframe>
+</div>
+</div>
+
+<script>
+//Make the DIV element draggagle:
+dragElement(document.getElementById(("notethisdivn1")));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
 </script>
 
