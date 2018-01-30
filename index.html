@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -406,6 +403,14 @@ function hwoff() {
 <button onclick="openPowerSchool()" class="tooltipbutton" id="showhome">Open</button><br>
 <button onclick="closePowerSchool()" class="tooltipbutton" id="hidehome">Close</button><br>
 	  </div>
+      
+      <!-- Google Drive App -->
+<a href="https://drive.google.com" target="_blank"><div class="tooltip"><img src="http://icons.iconarchive.com/icons/marcus-roberto/google-play/256/Google-Drive-icon.png" alt="Google Drive" height="102" width="122"></a>
+  <span class="tooltiptext">
+    <h1 class="ttt"> Google Drive </h1>
+<button onclick="openGoogleDrive()" class="tooltipbutton" id="showhome">Open</button><br>
+<button onclick="closeGoogleDrive()" class="tooltipbutton" id="hidehome">Close</button><br>
+	  </div>
 
 </div>
 
@@ -498,6 +503,15 @@ function openPowerSchool() {
 
 function closePowerSchool() {
 	PowerSchoolWindow.close();
+}
+</script>
+<script>
+var GoogleDriveWindow;
+function openGoogleDrive() {
+    GoogleDriveWindow = window.open('https://drive.google.com/', '_blank', 'toolbar=0,location=0,menubar=0');
+}
+function closeGoogleDrive() {
+    GoogleDriveWindow.close();
 }
 </script>
 	
