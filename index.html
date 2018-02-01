@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -116,7 +117,7 @@ body {
 </style>
 
 </head>
-<body onload="checkCookie()" id="image-head" class="image-head">
+<body onload="checkCookie();openUpdatesmodle()" id="image-head" class="image-head">
 
 <style>
 .dropdown {
@@ -331,7 +332,7 @@ function hwoff() {
 <div class="hwbutton">
 <img style="cursor: alias;" onclick="onnt()" style="border-radius: 4px;" src="https://i.imgur.com/lZp96kW.png" width="100" height="100">
 </div>
-	
+
 <div class="clearxx"></div>
 
 </div>
@@ -360,8 +361,8 @@ function hwoff() {
     <h1 class="ttt"> Web </h1>
 <button class="tooltipbutton" id="showhome">Open</button><br>
 <a href="http://bing.com" target="search_iframe"><button class="tooltipbutton" id="hidehome">Close</button><br></a>
-<button onclick="openGoogle()">Google</button><br>
-<button onclick="openBing()">Bing</button></span>
+<button class="tooltipbutton" onclick="openGoogle()">Google</button><br>
+<button class="tooltipbutton" onclick="openBing()">Bing</button></span>
 </div>
 <!-- 2Do App -->
 <div class="tooltip"><a href="https://itsmcb.github.io/mSchool0.5/2Do" target="search_iframe"><img src="https://i.imgur.com/Oz3GXym.png" alt="Homework Icon" height="102" width="162" onclick="openOAN()"></a>
@@ -387,7 +388,7 @@ function hwoff() {
 <button onclick="openGoogleClassroom()" class="tooltipbutton" id="showhome">Open</button><br>
 <button onclick="closeGoogleClassroom()" class="tooltipbutton" id="hidehome">Close</button><br>
 	  </div>
-	
+
 	<!-- ConnectED App -->
 <a href="https://connected.mcgraw-hill.com/connected/login.do" target="_blank"><div class="tooltip"><img src="https://www.mheonline.com/assets/images/cover/large/GLNMATHCO1.jpg" alt="ConnectED Math" height="102" width="122"></a>
   <span class="tooltiptext">
@@ -395,7 +396,7 @@ function hwoff() {
 <button onclick="openConnectEDmath()" class="tooltipbutton" id="showhome">Open</button><br>
 <button onclick="closeConnectEDmath()" class="tooltipbutton" id="hidehome">Close</button><br>
 	  </div>
-	
+
 	<!-- Power School App -->
 <a href="https://ps.d64.org/public/" target="_blank"><div class="tooltip"><img src="https://www.milanareaschools.org/cms/lib/MI02208047/Centricity/Domain/41/PowerSchool%20Logo.jpg" alt="Power School Login" height="102" width="162"></a>
   <span class="tooltiptext">
@@ -403,7 +404,7 @@ function hwoff() {
 <button onclick="openPowerSchool()" class="tooltipbutton" id="showhome">Open</button><br>
 <button onclick="closePowerSchool()" class="tooltipbutton" id="hidehome">Close</button><br>
 	  </div>
-      
+
       <!-- Google Drive App -->
 <a href="https://drive.google.com" target="_blank"><div class="tooltip"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Google_Drive_Logo.svg/1184px-Google_Drive_Logo.svg.png" alt="Google Drive" height="102" width="122"></a>
   <span class="tooltiptext">
@@ -413,7 +414,21 @@ function hwoff() {
 	  </div>
 
 </div>
-
+<style>
+.tooltipbutton {
+	background-color: #008CBA;
+	border: none;
+	color: white;
+	padding: 5px 12px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 10px;
+	margin: 4px 2px;
+	cursor: pointer;
+font-family: 'Audiowide', cursive;
+}
+</style>
 
 </div>
 
@@ -471,25 +486,25 @@ setInterval(function() {
 	<source src="https://www.dropbox.com/s/3soccpp5z4t1vnr/I_Am_Running_Down_the_Long_Hallway_of_Viewmont_Elementary.mp3?raw=1" type="audio/mpeg">
 Your browser does not support the audio element.
 </audio>
-	
+
 	<script>
   var FeedbackWindow;
-  
+
  function openFeedback() {
      FeedbackWindow = window.open('https://goo.gl/forms/6Sn1k6xOrsxpaJnx2', '_blank', 'toolbar=0,location=0,menubar=0');
  }
- 
+
  function closeFeedback() {
       FeedbackWindow.close();
   }
   </script>
 	<script>
   var ConnectEDmathWindow;
-  
+
  function openConnectEDmath() {
      ConnectEDmathWindow = window.open('https://connected.mcgraw-hill.com/connected/login.do', '_blank', 'toolbar=0,location=0,menubar=0');
  }
- 
+
  function closeConnectEDmath() {
       ConnectEDmathWindow.close();
   }
@@ -514,8 +529,8 @@ function closeGoogleDrive() {
     GoogleDriveWindow.close();
 }
 </script>
-	
-	
+
+
 <!--2Do Save aka OAN save -->
 <style>
 .clickme {
@@ -695,7 +710,7 @@ function closeGoogleClassroom() {
 </script>
   </div>
 </div>
-	  
+
 	  <script>
 function on() {
     document.getElementById("overlay").style.display = "block";
@@ -705,7 +720,7 @@ function off() {
     document.getElementById("overlay").style.display = "none";
 }
 </script>
-	  
+
 <script>
 
 function setCookie(cname,cvalue,exdays) {
@@ -893,3 +908,123 @@ function dragElement(elmnt) {
 }
 </script>
 
+
+<style>
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #008CBA;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #008CBA;
+    color: white;
+}
+</style>
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Welcome to mSchool! Here are some updates below:</h2>
+    </div>
+    <div class="modal-body">
+      <p style="font-weight: bold"><p style="color:red">ALERT:</p> There is a glitch with Google Chrome where your homework and name data don't save. Avoid this by not restarting your device.</p>
+      <p>Check out NoteThis! This is made for people who waste too much paper because they buy too many stickeynotes.</p>
+    </div>
+    <div class="modal-footer">
+      <h3>mSchool is made by Martin Carl B.</h3>
+    </div>
+  </div>
+
+</div>
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+	function openUpdatesmodle() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
