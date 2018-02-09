@@ -120,7 +120,7 @@ color: white ;
 <h1>mSchool</h1>
     <h2> Organization: District 64</h2>
     <h2> Edition: mSchool Lex Edition</h2>
-    <h2> Recommended Specs:<br>512RAM</h2>
+    <h2> Recommended Specs:<br>512RAM+</h2>
 <h6> Version 0.6.1.0 <h6>
 
 </div>
@@ -162,9 +162,8 @@ ol li {
     padding: 8px;
 }
 
-#customers tr:nth-child(even){background-color: #f2f2f2;}
+#customers tr:nth-child(even){background-color: rgba(255,255,255,0.1)    /* 10% opaque red */  }
 
-#customers tr:hover {background-color: #ddd;}
 
 #customers th {
     padding-top: 12px;
@@ -339,6 +338,19 @@ function startAutoSavingMSFNqU() {
 </script>
 <!-- End Of mSchool Framework Name Save -->
   </tr>
+</table>
+
+
+<button onclick="openPannel(event, 'Creditstwo')">==></button>
+</div>
+<div id="Creditstwo" class="tabcontent">
+  <h3>Versions</h3>
+<table id="customers">
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Version</th>
+  </tr>
   <tr>
     <td><div style="height:120; width:125;" class="ct" id="editMSFNqI" contenteditable="true">
 <p>Rander<p>
@@ -406,11 +418,13 @@ function startAutoSavingMSFNqP() {
 <!-- End Of mSchool Framework Name Save -->
   </tr>
 </table>
-
+<button onclick="openPannel(event, 'Versions')"><==</button>
 </div>
-
 <div id="Settings" class="tabcontent">
-
+<h3> Settings </h3>
+<center>
+<h2> COMING SOON! </h2>
+</center>
 
 
 
