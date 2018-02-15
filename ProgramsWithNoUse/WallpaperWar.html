@@ -1,0 +1,37 @@
+<style>
+body {
+	color:white;
+    background-color:black;
+}
+</style>
+<center>
+<h1> Wallpaper War </h1>
+<h4> Choose a funny image from your files, and show the funny image to your friends.</h4>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<form id="form1" runat="server">
+  <input type='file' id="imgInp" />
+  <img id="blah" src="#" alt="Your Image" />
+</form>
+
+<script>
+function readURL(input) {
+
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function(e) {
+      $('#blah').attr('src', e.target.result);
+    }
+
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+$("#imgInp").change(function() {
+  readURL(this);
+});
+</script>
+<div>
+<h1> How To Play </h1>
+<h2> Get 3 friends and have two of them on this webpage. Pick one of your friends and ask them to battle. You both have 10 seconds to choose your funny wallpaper, go quick!!! Then ask the 3rd friend who's image is funnier.</h2>
+</div>
