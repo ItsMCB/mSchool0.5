@@ -1,3 +1,4 @@
+
 <title>Search - mSchool </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
@@ -105,6 +106,11 @@
         <li><a href="https://pixlr.com/editor/" target="_blank"><button class="newsearchbutton">Pixlr</button></a><br>
 			<button onclick="openPixlr()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
 			<button onclick="closePixlr()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+					</li>
+                    
+                     <li><a href="https://itsmcb.github.io/mSchool0.5/calculator" target="_blank"><button class="newsearchbutton">Calculator</button></a><br>
+			<button onclick="openCalc()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+			<button onclick="closeCalc()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
 					</li>
                     
                     
@@ -338,5 +344,17 @@ function openMozillaRTE() {
 
 function closeMozillaRTE() {
 	MozillaRTEWindow.close();
+}
+</script>
+
+<script>
+var MozillaRTEWindow;
+
+function openCalc() {
+	CalcWindow = window.open('https://itsmcb.github.io/mSchool0.5/calculator', '_blank', 'toolbar=0,location=0,menubar=0');
+}
+
+function closeCalc() {
+	CalcWindow.close();
 }
 </script>
