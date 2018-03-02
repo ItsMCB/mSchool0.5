@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -349,8 +350,8 @@ function hwoff() {
 
   <span class="tooltiptext">
   <h1 class="ttt"> Home </h1>
-<button class="tooltipbutton" id="showhome">Open</button><br>
-<button class="tooltipbutton" id="hidehome">Close</button>
+<button class="showhomejquery" id="showhome">Open</button><br>
+<button class="hidehomejquery" id="hidehome">Close</button>
 	</span>
 
 </div>
@@ -435,7 +436,7 @@ font-family: 'Audiowide', cursive;
 <div class="lol" id="container">
 	<img class="button" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Ic_fullscreen_36px.svg/2000px-Ic_fullscreen_36px.svg.png" height="25" width='25'><br>
 	<center>
-		<iframe height="600px" width="1350px" src="https://sites.google.com/a/d64.org/lincoln-student-portal/" name="search_iframe"></iframe>
+		<iframe class="hideandshowjquery" height="600px" width="1350px" src="https://sites.google.com/a/d64.org/lincoln-student-portal/" name="search_iframe"></iframe>
 	</center>
 
 <div class="error"></div>
@@ -1026,5 +1027,44 @@ window.onclick = function(event) {
 }
 </script>
 
+<script>
+$(document).ready(function(){
+    $(".hidehomejquery").click(function(){
+        $(".hideandshowjquery").fadeOut()
+    });
+    $(".showhomejquery").click(function(){
+        $(".hideandshowjquery").fadeIn();
+    });
+});
+</script>
+
+    <style>
+.showhomejquery {
+	background-color: #008CBA;
+	border: none;
+	color: white;
+	padding: 5px 12px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 10px;
+	margin: 4px 2px;
+	cursor: pointer;
+font-family: 'Audiowide', cursive;
+}
+.hidehomejquery {
+	background-color: #008CBA;
+	border: none;
+	color: white;
+	padding: 5px 12px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 10px;
+	margin: 4px 2px;
+	cursor: pointer;
+font-family: 'Audiowide', cursive;
+}
+</style>
 </body>
 </html>
