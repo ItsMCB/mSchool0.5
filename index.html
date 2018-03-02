@@ -226,6 +226,8 @@ body {
 
      <a style="text-decoration: none; color: white;" href="https://itsmcb.github.io/mSchool0.5/RCC"><p> Root Control Center </p></a>
     <a style="text-decoration: none; color: white;" href="https://www.google.com/"><p> Logout </p></a>
+    
+    <a class="YouTubeFloatbuttonn1" style="text-decoration: none; color: white;font-size:12px"><p>Show Floating YouTube</p></a>
   </div>
 
 </div>
@@ -572,31 +574,7 @@ position: absolute;
 <form method="get" action="https://www.google.com/search?q=" opacity="0.3" target="_blank">
     <input name="q" placeholder="Google" class="searchbar" target="_blank">
     </form>
-<script type="text/javascript">
-function saveEdits() {
 
-//get the editable element
-var editElem = document.getElementById("edit");
-
-//get the edited element content
-var userVersion = editElem.innerHTML;
-
-//save the content to local storage
-localStorage.userEdits = userVersion;
-
-//write a confirmation to the user
-document.getElementById("update").innerHTML="Edits saved!";
-
-}
-</script>
-<script>
-function checkEdits() {
-
-//find out if the user has previously saved edits
-if(localStorage.userEdits!=null)
-document.getElementById("edit").innerHTML = localStorage.userEdits;
-}
-</script>
 
 <!-- Attempt at Full-Screen iFrames -->
 	<script>
@@ -1066,5 +1044,126 @@ font-family: 'Audiowide', cursive;
 font-family: 'Audiowide', cursive;
 }
 </style>
+
+<!-- Hide on load script! n1-->
+<style>
+#YouTubeFloatdivn1 {
+  display: none;
+}
+</style>
+<!-- Main Hide/Show Script! n1-->
+<script>
+$(document).ready(function(){
+    $(".YouTubeFloathidebuttonn1").click(function(){
+        $("#YouTubeFloatdivn1").hide(1000);
+    });
+});
+</script>
+<script>
+$(document).ready(function(){
+    $(".YouTubeFloatbuttonn1").click(function(){
+        $("#YouTubeFloatdivn1").show(1000);
+    });
+});
+</script>
+
+<!-- Script for draggable notethis note #1 -->
+<style>
+#YouTubeFloatdivn1 {
+    position: absolute;
+    z-index: 9;
+    text-align: center;
+}
+
+#YouTubeFloatdivn1header {
+    cursor: move;
+    z-index: 10;
+background-color: #008CBA;
+    color: #fff;
+
+}
+.YouTubeFloatdivn1module {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.0),
+      rgba(0, 0, 0, 0.0)
+    ),;
+  background-size: cover;
+  width: 300px;
+  height: 100px;
+  margin: 10px 0 0 10px;
+  position: relative;
+  float: left;
+
+}
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900);
+</style>
+
+
+<div id="YouTubeFloatdivn1">
+  <div id="YouTubeFloatdivn1header">Floating YouTube</div>
+  <button style="background-color: #008CBA; border: none; color: white; padding: 5px 12px; text-align: center; text-decoration: none; display: inline-block; font-size: 10px; margin: 4px 2px; cursor: pointer; font-family: 'Audiowide', cursive;"class="YouTubeFloathidebuttonn1">Hide</button>
+<div class="YouTubeFloatdivn1module cap"><br><br>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<input id="user_input" value="http://www.youtube.com/watch?v=t-ZRX8984sc" />
+<input type="submit">
+<div id="video"></div>
+
+<script>
+$('input[type=submit]').click(function () {
+    function generate() {
+        var input = $('#user_input').val();
+        return input.replace(/(?:http:\/\/)?(?:www\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=)?(.+)/g, '<iframe width="320" height="200" src="http://www.youtube.com/embed/$1" frameborder="0" allowfullscreen></iframe>');
+    }
+    $('#video').html(generate());
+});
+</script>
+</div>
+</div>
+
+<script>
+//Make the DIV element draggagle:
+dragElement(document.getElementById(("YouTubeFloatdivn1")));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+</script>
 </body>
 </html>
