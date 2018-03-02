@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -352,20 +350,18 @@ function hwoff() {
 
   <span class="tooltiptext">
   <h1 class="ttt"> Home </h1>
-<button class="showhomejquery" id="showhome">Open</button><br>
-<button class="hidehomejquery" id="hidehome">Close</button>
+<button class="showhomejquery">Open</button><br>
+<button class="hidehomejquery">Close</button>
 	</span>
 
 </div>
 <!-- Web Apps -->
-<a href="http://bing.com" target="search_iframe"><div class="tooltip"><img src="https://i.imgur.com/vauHvWa.png" alt="Home Application Icon" height="102" width="162"></a>
+<a href="http://bing.com" target="search_iframe"><div class="tooltip"><img src="https://i.imgur.com/YJizU1E.png" alt="Home Application Icon" height="102" width="162"></a>
 
   <span class="tooltiptext">
-    <h1 class="ttt"> Web </h1>
-<button class="tooltipbutton" id="showhome">Open</button><br>
-<a href="http://bing.com" target="search_iframe"><button class="tooltipbutton" id="hidehome">Close</button><br></a>
-<button class="tooltipbutton" onclick="openGoogle()">Google</button><br>
-<button class="tooltipbutton" onclick="openBing()">Bing</button></span>
+    <h1 class="ttt">Stylix Web</h1>
+<button onclick="openStylixWeb()"class="tooltipbutton">Open</button><br>
+<button onclick="closeStylixWeb()"class="tooltipbutton">Close</button><br>
 </div>
 <!-- 2Do App -->
 <div class="tooltip"><a href="https://itsmcb.github.io/mSchool0.5/2Do" target="search_iframe"><img src="https://i.imgur.com/Oz3GXym.png" alt="Homework Icon" height="102" width="162" onclick="openOAN()"></a>
@@ -657,17 +653,6 @@ function fullscreenChange() {
 <iframe height="600px" width="1450px" src="https://itsmcb.github.io/mSchool0.5/search" name="sys_search_frame"></iframe>
 </center>
 
-
-	<script>
-function openGoogle() {
-    window.open('http://www.google.com', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-</script>
-<script>
-function openBing() {
-    window.open('http://www.bing.com', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-</script>
 <script>
 var MAILWindow;
 function openMAIL() {
@@ -1165,5 +1150,18 @@ function dragElement(elmnt) {
   }
 }
 </script>
+
+<script>
+var StylixWebWindow;
+
+function openStylixWeb() {
+	PowerSchoolWindow = window.open('https://itsmcb.github.io/mSchool0.5/stylixweb', '_blank', 'toolbar=0,location=0,menubar=0');
+}
+
+function closeStylixWeb() {
+	StylixWebWindow.close();
+}
+</script>
+
 </body>
 </html>
