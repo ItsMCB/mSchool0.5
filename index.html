@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -1221,10 +1222,10 @@ position: absolute;
 
 document.getElementById("demo").innerHTML = "Today is " + new Intl.DateTimeFormat('en-US',{weekday:'long'}).format(today);
 
-if (today.getDay() == 4) {
-  document.getElementById("bleh").innerHTML = "Your weekly review is due TOMORROW!";
+if (today.getDay() == 2) {
+  document.getElementById("bleh").innerHTML = "Your current events article is due TOMORROW!";
 } else {
-  document.getElementById("bleh").innerHTML = `Not Thursday. Come back in ${7-(today.getDay()-4)%7} days to re-check.`;
+  document.getElementById("bleh").innerHTML = `Your current events article is due in ${7-(today.getDay()-2)%7} days.`;
 }
     </script>
     
