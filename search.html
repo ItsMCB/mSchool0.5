@@ -1,9 +1,12 @@
-
+<head>
 <title>Search - mSchool </title>
+<script src="https://itsmcb.github.io/mSchool0.5/MCBAppOpenerV1.js">
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js">
+</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112404838-1"></script>
 <script>
@@ -21,96 +24,97 @@
       <input id="myFilter" data-type="search">
     </form>
     <ul data-role="listview" data-filter="true" data-input="#myFilter" data-autodividers="true" data-inset="true">
+    </head>
 
 
-	<li><a href="https://itsmcb.github.io/mSchool0.5/2Do" target="_blank"><button class="newsearchbutton">2Do</button></a><br>
-		<button onclick="openTwoDo()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
-		<button onclick="closeTwoDo()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+	<li><a href="https://itsmcb.github.io/mSchool0.5/2Do" target="_blank"><button class="newsearchbutton">Homework</button></a><br>
+		<button onclick="openHomeworkapp()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+		<button onclick="closeHomeworkapp()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
 				</li>
 
 	<li><a href="https://mail.google.com/" target="_blank"><button class="newsearchbutton">Mail</button></a><br>
-		<button onclick="openMAIL()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
-		<button onclick="closeMAIL()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+		<button onclick="openMailapp()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+		<button onclick="closeMailapp()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
 				</li>
 
 	<li><a href="https://classroom.google.com/" target="_blank"><button class="newsearchbutton">Classroom</button></a><br>
-		<button onclick="openGoogleClassroom()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
-		<button onclick="closeGoogleClassroom()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+		<button onclick="openGoogleClassroomapp()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+		<button onclick="closeGoogleClassroomapp()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
 				</li>
 
 	<li><a href="https://quizlet.com/latest/" target="_blank"><button class="newsearchbutton">Quizlet</button></a><br>
-		<button onclick="openQuizlet()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
-		<button onclick="closeQuizlet()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+		<button onclick="openQuizletapp()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+		<button onclick="closeQuizletapp()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
 				</li>
 
 	<li><a href="https://drive.google.com/" target="_blank"><button class="newsearchbutton">Google Drive</button></a><br>
-		<button onclick="openGoogleDrive()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
-		<button onclick="closeGoogleDrive()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+		<button onclick="openGoogleDriveapp()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+		<button onclick="closeGoogleDriveapp()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
 				</li>
 
 	<li><a href="https://docs.google.com/" target="_blank"><button class="newsearchbutton">Google Docs</button></a><br>
-		<button onclick="openGoogleDocs()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
-		<button onclick="closeGoogleDocs()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+		<button onclick="openGoogleDocsapp()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+		<button onclick="closeGoogleDocsapp()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
 				</li>
 
 	<li><a href="https://docs.google.com/spreadsheets/u/0/" target="_blank"><button class="newsearchbutton">Google Sheets</button></a><br>
-		<button onclick="openGoogleSheets()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
-		<button onclick="closeGoogleSheets()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+		<button onclick="openGoogleSheetsapp()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+		<button onclick="closeGoogleSheetsapp()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
 				</li>
 
 	<li><a href="https://docs.google.com/presentation/u/0/" target="_blank"><button class="newsearchbutton">Google Slides</button></a><br>
-		<button onclick="openGoogleSlides()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
-		<button onclick="closeGoogleSlides()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+		<button onclick="openGoogleSlidesapp()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+		<button onclick="closeGoogleSlidesapp()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
 				</li>
 
 	<li><a href="https://docs.google.com/forms/u/0/" target="_blank"><button class="newsearchbutton">Google Forms</button></a><br>
-		<button onclick="openGoogleForms()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
-		<button onclick="closeGoogleForms()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+		<button onclick="openGoogleFormsapp()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+		<button onclick="closeGoogleFormsapp()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
 				</li>
 
 	<li><a href="https://itsmcb.github.io/mSchool0.5/Rander/" target="_blank"><button class="newsearchbutton">Rander</button></a><br>
-		<button onclick="openRander()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
-		<button onclick="closeRander()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+		<button onclick="openRanderapp()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+		<button onclick="closeRanderapp()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
 				</li>
 
 	<li><a href="https://itsmcb.github.io/mSchool0.5/Mozilla%20Rich%20Text%20Editor%20for%20mSchool" target="_blank"><button class="newsearchbutton">Mozilla Rich Text Editor</button></a><br>
-		<button onclick="openMozillaRTE()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
-		<button onclick="closeMozillaRTE()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+		<button onclick="openMozillaRTEapp()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+		<button onclick="closeMozillaRTEapp()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
 				</li>
 
 	<li><a href="https://earth.google.com/web/" target="_blank"><button class="newsearchbutton">Google Earth</button></a><br>
-		<button onclick="openGoogleEarth()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
-		<button onclick="closeGoogleEarth()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+		<button onclick="openGoogleEarthapp()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+		<button onclick="closeGoogleEarthapp()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
 				</li>
 
 	<li><a href="http://www.cnn.com/cnn10" target="_blank"><button class="newsearchbutton">CNN10</button></a><br>
-		<button onclick="openCnn10()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
-		<button onclick="closeCnn10()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+		<button onclick="openCnn10app()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+		<button onclick="closeCnn10app()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
 				</li>
 
 		<li><a href="https://ps.d64.org/public/" target="_blank"><button class="newsearchbutton">Powerschool</button></a><br>
-			<button onclick="openPowerSchool()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
-			<button onclick="closePowerSchool()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+			<button onclick="openPowerSchoolapp()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+			<button onclick="closePowerSchoolapp()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
 					</li>
 
 		<li><a href="http://classroom.google.com" target="_blank"><button class="newsearchbutton">Lincol Student Portal</button></a><br>
-			<button onclick="openLMSStudentPortal()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
-			<button onclick="closeLMSStudentPortal()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+			<button onclick="openLMSStudentPortalapp()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+			<button onclick="closeLMSStudentPortalapp()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
 					</li>
                     
         <li><a href="https://www.khanacademy.org/" target="_blank"><button class="newsearchbutton">Khan Academy</button></a><br>
-			<button onclick="openKhanAcademy()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
-			<button onclick="closeKhanAcademy()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+			<button onclick="openKhanAcademyapp()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+			<button onclick="closeKhanAcademyapp()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
 					</li>
                     
         <li><a href="https://pixlr.com/editor/" target="_blank"><button class="newsearchbutton">Pixlr</button></a><br>
-			<button onclick="openPixlr()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
-			<button onclick="closePixlr()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+			<button onclick="openPixlrapp()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+			<button onclick="closePixlrapp()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
 					</li>
                     
                      <li><a href="https://itsmcb.github.io/mSchool0.5/calculator" target="_blank"><button class="newsearchbutton">Calculator</button></a><br>
-			<button onclick="openCalc()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
-			<button onclick="closeCalc()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
+			<button onclick="openCalcapp()" style="display: block;float: left; margin-right: 5px;background-color: #008CBA;border: none;color: white;padding: 5px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 10px;margin: 4px 2px;cursor: pointer;font-family: 'Audiowide', cursive;width:100px;">Open</button>
+			<button onclick="closeCalcapp()" style="margin-right: 0;background-color: red;color: white;font-size: 10px;padding: 5px 12px;width:100px;">Close</button><div style="clear: both;"></div>
 					</li>
                     
                     
@@ -121,240 +125,5 @@
     </ul>
     </div>
 
-
-
   </div>
 </div>
-
-<!-- Web Browser App Scripts -->
-<script>
-function openGoogle() {
-    window.open('http://www.google.com', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-</script>
-<script>
-function openBing() {
-    window.open('http://www.bing.com', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-</script>
-<script>
-var MAILWindow;
-
-function openMAIL() {
-    MAILWindow = window.open('https://mail.google.com/', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-
-function closeMAIL() {
-    MAILWindow.close();
-}
-</script>
-
-	<script>
-var GoogleClassroomWindow;
-
-function openGoogleClassroom() {
-    GoogleClassroomWindow = window.open('https://classroom.google.com/', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-
-function closeGoogleClassroom() {
-    GoogleClassroomWindow.close();
-}
-</script>
-
-	<script>
-var QuizletWindow;
-
-function openQuizlet() {
-    QuizletWindow = window.open('https://quizlet.com/latest/', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-
-function closeQuizlet() {
-    QuizletWindow.close();
-}
-</script>
-	<script>
-var GoogleDriveWindow;
-
-function openGoogleDrive() {
-    GoogleDriveWindow = window.open('https://drive.google.com/', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-
-function closeGoogleDrive() {
-    GoogleDriveWindow.close();
-}
-</script>
-
-	<script>
-var GoogleDocsWindow;
-
-function openGoogleDocs() {
-    GoogleDocsWindow = window.open('https://docs.google.com/', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-
-function closeGoogleDocs() {
-    GoogleDocsWindow.close();
-}
-</script>
-
-	<script>
-var GoogleSheetsWindow;
-
-function openGoogleSheets() {
-    GoogleSheetsWindow = window.open('https://docs.google.com/spreadsheets/u/0/', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-
-function closeGoogleSheets() {
-    GoogleSheetsWindow.close();
-}
-</script>
-
-	<script>
-var GoogleSlidesWindow;
-
-function openGoogleSlides() {
-    GoogleSlidesWindow = window.open('https://docs.google.com/presentation/u/0/', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-
-function closeGoogleSlides() {
-    GoogleSlidesWindow.close();
-}
-</script>
-	<script>
-var GoogleFormsWindow;
-
-function openGoogleForms() {
-    GoogleFormsWindow = window.open('https://docs.google.com/forms/u/0/', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-
-function closeGoogleForms() {
-    GoogleFormsWindow.close();
-}
-</script>
-
-	<script>
-var FeedbackWindow;
-
-function openFeedback() {
-    FeedbackWindow = window.open('https://goo.gl/forms/6Sn1k6xOrsxpaJnx2', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-
-function closeFeedback() {
-    FeedbackWindow.close();
-}
-</script>
-
-	<script>
-var RanderWindow;
-
-function openRander() {
-    RanderWindow = window.open('https://itsmcb.github.io/mSchool0.5/Rander', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-
-function closeRander() {
-    RanderWindow.close();
-}
-</script>
-<script>
-var GoogleEarthWindow;
-
-function openGoogleEarth() {
-	GoogleEarthWindow = window.open('https://earth.google.com/web/', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-
-function closeGoogleEarth() {
-	GoogleEarthWindow.close();
-}
-</script>
-<script>
-var Cnn10Window;
-
-function openCnn10() {
-	Cnn10Window = window.open('http://www.cnn.com/cnn10', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-
-function closeCnn10() {
-	Cnn10Window.close();
-}
-</script>
-<script>
-var PowerSchoolWindow;
-
-function openPowerSchool() {
-	PowerSchoolWindow = window.open('https://ps.d64.org/public/', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-
-function closePowerSchool() {
-	PowerSchoolWindow.close();
-}
-</script>
-<script>
-var LMSStudentPortalWindow;
-
-function openLMSStudentPortal() {
-	LMSStudentPortalWindow = window.open('https://sites.google.com/a/d64.org/lincoln-student-portal/', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-
-function closeLMSStudentPortal() {
-	LMSStudentPortalWindow.close();
-}
-</script>
-
-<script>
-var PixlrWindow;
-
-function openPixlr() {
-	PixlrWindow = window.open('https://pixlr.com/editor/', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-
-function closePixlr() {
-	PixlrWindow.close();
-}
-</script>
-
-<script>
-var KhanAcademyWindow;
-
-function openKhanAcademy() {
-	KhanAcademyWindow = window.open('https://www.khanacademy.org/', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-
-function closeKhanAcademy() {
-	KhanAcademyWindow.close();
-}
-</script>
-
-<script>
-var TwoDoWindow;
-
-function openTwoDo() {
-	TwoDoWindow = window.open('https://itsmcb.github.io/mSchool0.5/2Do', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-
-function closeTwoDo() {
-	TwoDoWindow.close();
-}
-</script>
-
-<script>
-var MozillaRTEWindow;
-
-function openMozillaRTE() {
-	MozillaRTEWindow = window.open('https://itsmcb.github.io/mSchool0.5/Mozilla%20Rich%20Text%20Editor%20for%20mSchool', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-
-function closeMozillaRTE() {
-	MozillaRTEWindow.close();
-}
-</script>
-
-<script>
-var MozillaRTEWindow;
-
-function openCalc() {
-	CalcWindow = window.open('https://itsmcb.github.io/mSchool0.5/calculator', '_blank', 'toolbar=0,location=0,menubar=0');
-}
-
-function closeCalc() {
-	CalcWindow.close();
-}
-</script>
