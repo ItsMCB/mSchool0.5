@@ -14,6 +14,8 @@
 <span>
 <p onclick="alert('Stylix Super Web by Martin Carl Bukoll. Used sources from iFrame Web Browser v1.4 by Ryan H.')" id="title">Stylix Super Web</p>
 </span>
+<div class="lol" id="container">
+	<img class="button" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Ic_fullscreen_36px.svg/2000px-Ic_fullscreen_36px.svg.png" height="25" width='25'><br>
 
 <div>
 <button class="btn"type="button" onclick="back();" id="back">⇚</button>
@@ -35,10 +37,17 @@
 <button class="btn" type="button" onclick="search();" id="searchSubmit">Search</button>
 <button class="btn" type="button" onclick="setSize();" id="setSize">Set Size</button>
 </div>
-
+	<center>
 <iframe src="http://www.bing.com" height = "593" width = "100%" id="iframe" frameborder="0" >
   <p>Your browser does not support iframes.</p>
 </iframe>
+	</center>
+
+<div class="error"></div>
+</div>
+
+
+
 
 </body>
 </html>
@@ -189,3 +198,61 @@ body {
   color: white;
 }
 </style>
+
+
+<!-- Attempt at Full-Screen iFrames -->
+	<script>
+var button = document.querySelector('#container .button');
+button.addEventListener('click', fullscreen);
+// when you are in fullscreen, ESC and F11 may not be trigger by keydown listener.
+// so don't use it to detect exit fullscreen
+document.addEventListener('keydown', function (e) {
+  console.log('key press' + e.keyCode);
+});
+// detect enter or exit fullscreen mode
+document.addEventListener('webkitfullscreenchange', fullscreenChange);
+document.addEventListener('mozfullscreenchange', fullscreenChange);
+document.addEventListener('fullscreenchange', fullscreenChange);
+document.addEventListener('MSFullscreenChange', fullscreenChange);
+
+function fullscreen() {
+  // check if fullscreen mode is available
+  if (document.fullscreenEnabled ||
+    document.webkitFullscreenEnabled ||
+    document.mozFullScreenEnabled ||
+    document.msFullscreenEnabled) {
+
+    // which element will be fullscreen
+    var iframe = document.querySelector('#container iframe');
+    // Do fullscreen
+    if (iframe.requestFullscreen) {
+      iframe.requestFullscreen();
+    } else if (iframe.webkitRequestFullscreen) {
+      iframe.webkitRequestFullscreen();
+    } else if (iframe.mozRequestFullScreen) {
+      iframe.mozRequestFullScreen();
+    } else if (iframe.msRequestFullscreen) {
+      iframe.msRequestFullscreen();
+    }
+  }
+  else {
+    document.querySelector('.error').innerHTML = 'Your browser is not supported';
+  }
+}
+
+function fullscreenChange() {
+  if (document.fullscreenEnabled ||
+       document.webkitIsFullScreen ||
+       document.mozFullScreen ||
+       document.msFullscreenElement) {
+    console.log('enter fullscreen');
+  }
+  else {
+    console.log('exit fullscreen');
+  }
+  // force to reload iframe once to prevent the iframe source didn't care about trying to resize the window
+  // comment this line and you will see
+  var iframe = document.querySelector('iframe');
+  iframe.src = iframe.src;
+}
+	</script>
