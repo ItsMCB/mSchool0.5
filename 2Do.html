@@ -131,21 +131,26 @@ document.getElementById("edit").innerHTML = localStorage.userEdits;
 text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;"id='decrease' type="button" value="-">
 <input style="background-color: #008CBA; /* Blue */border: none;color: white;padding: 4px 8px;
 text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;"id='increase' type="button" value="+">
-<button type="button" style="background-color: #008CBA; /* Blue */border: none;color: white;padding: 4px 8px;
-text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;"
-class="emnormalen">Normal</button>
 
 <button type="button" style="background-color: #008CBA; /* Blue */border: none;color: white;padding: 4px 8px;
 text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;"
-class="embolden">Bold</button>
+class="emnormalen" id="emnormalen">Normal</button>
 
 <button type="button" style="background-color: #008CBA; /* Blue */border: none;color: white;padding: 4px 8px;
 text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;"
-class="emitalicen">Italic</button>
+class="embolden" id="embolden">Bold</button>
 
 <button type="button" style="background-color: #008CBA; /* Blue */border: none;color: white;padding: 4px 8px;
 text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;"
-class="emunderlineen">Underline</button>
+class="emitalicen" id="emitalicen">Italic</button>
+
+<button type="button" style="background-color: #008CBA; /* Blue */border: none;color: white;padding: 4px 8px;
+text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;"
+class="emunderlineen" id="emunderlineen">Underline</button>
+
+<button type="button" style="background-color: #008CBA; /* Blue */border: none;color: white;padding: 4px 8px;
+text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;"
+class="emstrikethoughen" id="emstrikethoughen">Strikethough</button>
 
 <br>
 <input type="text" id="url" size="30" value="http://google.com/">
@@ -153,7 +158,6 @@ class="emunderlineen">Underline</button>
 <button class="clickme" style="cursor: alias;" class="bgaudiobutton" onclick="hwoff()" style="color:white;font-size:20px;"> Close Options Menu </button>
 </center>
 </div>
-
 </div></div>
 </center>
 <style>
@@ -600,6 +604,16 @@ jQuery(function($) {
     });
 });
 </script>
+<script>
+jQuery(function($) {
+    $('.emstrikethoughen').click(function(){
+        var highlight = window.getSelection();  
+        var span = '<span class="strikethrough">' + highlight + '</span>';
+        var text = $('.ct').html();
+        $('.ct').html(text.replace(highlight, span));
+    });
+});
+</script>
 <style>
 .bold {
     font-weight: bold;
@@ -612,6 +626,7 @@ jQuery(function($) {
 .italic {
     font-style: italic;
 }
+.strikethrough { text-decoration: line-through; }
 
 .underline { text-decoration: underline white; }
 </style>
