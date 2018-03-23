@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -116,7 +117,7 @@ body {
 </style>
 
 </head>
-<body onload="checkCookie();openUpdatesmodle()" id="image-head" class="image-head">
+<body onload="checkCookie();openUpdatesmodle()" id="image-head" class="image-head" onbeforeunload="return messagebeforeunload()">
 
 <style>
 .dropdown {
@@ -1307,6 +1308,11 @@ for (i = 0; i < close.length; i++) {
 }
 </script>
 
+<script>
+function messagebeforeunload() {
+    return "Do you want to close mSchool?";
+}
+</script>
 
 </body>
 </html>
