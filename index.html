@@ -117,7 +117,54 @@ body {
 </style>
 
 </head>
-<body onload="checkCookie();openUpdatesmodle()" id="image-head" class="image-head" onbeforeunload="return messagebeforeunload()">
+<body onload="loadingon();checkCookie();openUpdatesmodle()" id="image-head" class="image-head" onbeforeunload="return messagebeforeunload()">
+
+
+
+<!-- Loading -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#loadinglogo").click(function(){
+        $("#loadingoverlay").hide();
+    });
+    $("#loadinglogo").click(function(){
+        $("#loadingoverlay").show();
+    });
+});
+</script>
+
+<style>
+#loadingoverlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+}
+
+</style>
+
+<script>
+function loadingon() {
+    document.getElementById("loadingoverlay").style.display = "block";
+}
+var epicVarx = setInterval(loadingoff, 5000);
+function loadingoff() {
+    document.getElementById("loadingoverlay").style.display = "none";
+     document.getElementById("loadingframe").src = "http://www.memes.com";
+}
+</script>
+	<div id="loadingoverlay">
+  <div id="text">
+<iframe height="800px" width="1550px" src="https://itsmcb.github.io/mSchool0.5/loading.html" id="loadingframe"></iframe>
+</div></div>
+<!-- END OF LOADING -->
 
 <style>
 .dropdown {
@@ -225,7 +272,7 @@ body {
 
      <a style="text-decoration: none; color: white;" href="https://itsmcb.github.io/mSchool0.5/RCC"><p> Root Control Center </p></a>
     <a style="text-decoration: none; color: white;" href="https://www.google.com/"><p> Logout </p></a>
-    
+
     <a class="YouTubeFloatbuttonn1" style="text-decoration: none; color: white;font-size:12px"><p>Show Floating YouTube</p></a>
   </div>
 
@@ -1255,13 +1302,13 @@ var rotateForce = 20; // max popup rotation in deg
 $(document).mousemove(function(e) {
     var docX = $(document).width();
     var docY = $(document).height();
-    
+
     var moveX = (e.pageX - docX/2) / (docX/2) * -moveForce;
     var moveY = (e.pageY - docY/2) / (docY/2) * -moveForce;
-    
+
     var rotateY = (e.pageX / docX * rotateForce*2) - rotateForce;
     var rotateX = -((e.pageY / docY * rotateForce*2) - rotateForce);
-    
+
     $('.popup')
         .css('left', moveX+'px')
         .css('top', moveY+'px')
@@ -1294,7 +1341,7 @@ if (today.getDay() == 2) {
   document.getElementById("bleh").innerHTML = `Have a good day!`;
 }
     </script>
-    
+
 <script>
 var close = document.getElementsByClassName("closebtn");
 var i;
