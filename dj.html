@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+<style>
+.button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+</style>
+<style>
+.creator {
+  display: inline-block;
+  border-radius: 0px;
+  background-color: #008CBA;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 15px 32px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.creator span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.creator span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.creator:hover span {
+  padding-right: 25px;
+}
+
+.creator:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+<style>
+.jakepaul {
+    color: #FF00FF;
+    cursor: pointer;
+}
+</style>
+<style>
+.title {
+    color: #FF00FF;
+    cursor: context-menu;
+    font-size: 350%;
+    text-align: center;
+}
+</style>
+<style>
+body {
+    background-color: #2C3539;
+}
+</style>
+<style>
+.songname {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 21px 150px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+</style>
+<style>
+.buttonloop {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+</style>
+</head>
+<h1 class=title>MCB Media Inveractive Player:DJ In The House</h1>
+<center>
+<br>
+<!-- Player -->
+<p>Click to play a audio file</p>
+<ul style="list-style: none">
+  <li>Audio Files
+    <ul id="list">
+      <li><a href="#" data-value="https://www.youtube.com/audiolibrary_download?vid=91b3994d3ac3a391">Cosmic Love</a></li>
+      <li><a href="#" data-value="https://www.youtube.com/audiolibrary_download?vid=1c4794e645e55c8c">Finding Me</a></li>
+      <li><a href="#" data-value="https://www.youtube.com/audiolibrary_download?vid=239ea202081a8396">Lost TIme</a></li>
+      <li><a href="#" data-value="https://www.youtube.com/audiolibrary_download?vid=05bc6fbf7569bcb1">Night Waves</a></li>
+    </ul>
+  </li>
+</ul>
+
+<audio id="audio" controls="controls">
+  <source id="audioSource" src=""></source>
+  Your browser does not support the audio format.
+</audio>
+    <script type="text/javascript">
+        list.onclick = function(e) {
+  e.preventDefault();
+
+  var elm = e.target;
+  var audio = document.getElementById('audio');
+
+  var source = document.getElementById('audioSource');
+  source.src = elm.getAttribute('data-value');
+
+  audio.load(); //call this to just preload the audio without playing
+  audio.play(); //call this to play the song right away
+};
+    </script>
+    
+
+ <br>
+<button onclick="document.getElementById('audio').play()" class="button">Play</button>
+<button onclick="document.getElementById('audio').pause()"class="button">Pause</button>
+
+<button onclick="enableLoop()"class="buttonloop">Enable Loop</button>
+<button onclick="disableLoop()" type="buttonloop" class="buttonloop">Disable Loop</button>
+<button onclick="checkLoop()" type="buttonloop" class="buttonloop">Check Loop Status</button>
+
+<br>
+<br>
+<br>
+
+<script>
+var vid = document.getElementById("audio");
+
+function enableLoop() {
+  vid.loop = true;
+  vid.load();
+}
+
+function disableLoop() {
+  vid.loop = false;
+  vid.load();
+}
+
+function checkLoop() {
+    alert(vid.loop);
+}
+</script>
+
+
+<br>
+<br>
+
+<center>
+</body>
+</html>
+
