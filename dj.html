@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <body onbeforeunload="return messagebeforeunload()">
@@ -136,6 +137,7 @@ ul li {
       <li><a class="three"href="#" data-value="https://www.youtube.com/audiolibrary_download?vid=1c4794e645e55c8c">Finding Me</a></li>
       <li><a class="three"href="#" data-value="https://www.youtube.com/audiolibrary_download?vid=239ea202081a8396">Lost TIme</a></li>
       <li><a class="three"href="#" data-value="https://www.youtube.com/audiolibrary_download?vid=05bc6fbf7569bcb1">Night Waves</a></li>
+	  <li><a class="three"href="#" data-value="https://d1u5p3l4wpay3k.cloudfront.net/minecraft_gamepedia/4/48/Calm4.ogg">Calm4.ogg</a></li>
     </ul>
   </li>
 </ul>
@@ -190,6 +192,40 @@ function checkLoop() {
 }
 </script>
 
+<!-- Playback Speed --><br>
+<script>
+var vid = document.getElementById("audio");
+
+function getPlaySpeed() { 
+    alert(vid.playbackRate);
+}
+function setPlaySpeedslower() { 
+    vid.playbackRate = 0.25;
+}
+function setPlaySpeedslow() { 
+    vid.playbackRate = 0.5;
+}
+function setPlaySpeednormal() { 
+    vid.playbackRate = 1.0;
+}
+function setPlaySpeedfast() { 
+    vid.playbackRate = 1.5;
+}
+function setPlaySpeedfaster() { 
+    vid.playbackRate = 2.0;
+}
+function setPlaySpeedfastest() { 
+    vid.playbackRate = 2.5;
+}
+</script>
+<button onclick="getPlaySpeed()" type="button">What is the playback speed?</button>
+<button onclick="setPlaySpeedslower()" type="button">0.25</button>
+<button onclick="setPlaySpeedslow()" type="button">0.5</button>
+<button onclick="setPlaySpeednormal()" type="button">Normal</button>
+<button onclick="setPlaySpeedfast()" type="button">1.5</button>
+<button onclick="setPlaySpeedfaster()" type="button">2.0</button>
+<button onclick="setPlaySpeedfastest()" type="button">2.5</button>
+
 
 <br>
 <br>
@@ -202,4 +238,3 @@ function messagebeforeunload() {
 <center>
 </body>
 </html>
-
