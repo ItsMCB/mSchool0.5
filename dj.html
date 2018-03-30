@@ -48,11 +48,11 @@ ul li {
 <ul style="list-style: none">
   <li>Audio Files
     <ul id="list">
-      <li><a class="three"href="#" data-value="https://www.youtube.com/audiolibrary_download?vid=91b3994d3ac3a391">Cosmic Love</a></li>
-      <li><a class="three"href="#" data-value="https://www.youtube.com/audiolibrary_download?vid=1c4794e645e55c8c">Finding Me</a></li>
-      <li><a class="three"href="#" data-value="https://www.youtube.com/audiolibrary_download?vid=239ea202081a8396">Lost TIme</a></li>
-      <li><a class="three"href="#" data-value="https://www.youtube.com/audiolibrary_download?vid=05bc6fbf7569bcb1">Night Waves</a></li>
-	  <li><a class="three"href="#" data-value="https://d1u5p3l4wpay3k.cloudfront.net/minecraft_gamepedia/4/48/Calm4.ogg">Calm4.ogg</a></li>
+      <li><a onclick="playAudMSS()"class="three"href="#" data-value="https://www.youtube.com/audiolibrary_download?vid=91b3994d3ac3a391">Cosmic Love</a></li>
+      <li><a onclick="playAudMSS()"class="three"href="#" data-value="https://www.youtube.com/audiolibrary_download?vid=1c4794e645e55c8c">Finding Me</a></li>
+      <li><a onclick="playAudMSS()"class="three"href="#" data-value="https://www.youtube.com/audiolibrary_download?vid=239ea202081a8396">Lost TIme</a></li>
+      <li><a onclick="playAudMSS()"class="three"href="#" data-value="https://www.youtube.com/audiolibrary_download?vid=05bc6fbf7569bcb1">Night Waves</a></li>
+	  <li><a onclick="playAudMSS()"class="three"href="#" data-value="https://d1u5p3l4wpay3k.cloudfront.net/minecraft_gamepedia/4/48/Calm4.ogg">Calm4.ogg</a></li>
     </ul>
   </li>
 </ul>
@@ -249,7 +249,34 @@ nav {
 
 
 
-<br><br><br><br><br><br>
+<!-- Jquery Hide Thing -->
+<script>
+vid.onstalled = function() {
+    alert("Media data is not available! Try checking your internet connection or reload the page.");
+};
+var vid = document.getElementById("audio");
+vid.onwaiting = function() {
+ //   alert("Wait! I need to buffer the next frame...");
+};
+</script>
+
+
+
+<br><br><br>
+<!-- Player Sounds -->
+<audio id="mediaselectsound">
+  <source src="https://www.dropbox.com/s/nij73iznl330tlx/Pop%20%28online-audio-converter.com%29.mp3?raw=1" type="audio/mp3">
+</audio>
+<script>
+var mediaselectsound = document.getElementById("mediaselectsound"); 
+
+function playAudMSS() { 
+    mediaselectsound.play(); 
+}
+</script>
+
+<!-- End Of Player Sounds -->
+<br><br><br>
 <!-- BF LEAVE MESSAGE -->
 <script>
 function messagebeforeunload() {
