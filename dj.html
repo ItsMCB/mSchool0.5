@@ -62,12 +62,12 @@ ul li {
 }
 </style>
 <style>
-.dropdownse {
+.loopdropdownse {
     position: relative;
     display: inline-block;
 }
 
-.dropdown-contentse {
+.loopdropdown-contentse {
     display: none;
     position: absolute;
     background-color: #008CBA;
@@ -78,7 +78,7 @@ ul li {
     color: white
 }
 
-.dropdownse:hover .dropdown-contentse {
+.loopdropdownse:hover .loopdropdown-contentse {
     display: block;
 }
 </style>
@@ -120,15 +120,40 @@ ul li {
 
  <br>
 
+<!-- Progress Bar -->
+<section id="skin">
+	<nav>
+		<div id="buttons">
+			<button class="buttonloop"type="button" id="playButton">Play</button>
+		</div>
+		<div id="defaultBar">
+			<div id="progressBar"></div>
+		</div>
+		<div style="clear:both"></div>
+        <div>
+        <!-- Volume
+<button class="buttonloop"onclick="getVolume()" type="button">What is the volume?</button> -->
+<button class="buttonloop"onclick="plusVolume()" type="button">Vol+</button>
+<button class="buttonloop"onclick="minusVolume()" type="button">Vol-</button>
+<script>
+function getVolume() { 
+    alert(audio.volume);
+} 
+  
+function plusVolume() {
+    audio.volume = audio.volume + 0.1;
+} 
+  
+function minusVolume() { 
+    audio.volume = audio.volume - 0.1;
+} 
+</script>
+  <!-- Playback Loop -->
+  
 <button onclick="enableLoop()"class="buttonloop">Enable Loop</button>
 <button onclick="disableLoop()" type="buttonloop" class="buttonloop">Disable Loop</button>
 <button onclick="checkLoop()" type="buttonloop" class="buttonloop">Check Loop Status</button>
 
-<br>
-<br>
-<br>
-
-<!-- Playback Loop -->
 <script>
 var vid = document.getElementById("audio");
 
@@ -147,21 +172,46 @@ function checkLoop() {
 }
 </script>
 
-<!-- Progress Bar -->
-<section id="skin">
-	<nav>
-		<div id="buttons">
-			<button type="button" id="playButton">Play</button>
+<!-- Playback Speed -->
+<script>
+var vid = document.getElementById("audio");
+
+function getPlaySpeed() { 
+    alert(vid.playbackRate);
+}
+function setPlaySpeedslower() { 
+    vid.playbackRate = 0.25;
+}
+function setPlaySpeedslow() { 
+    vid.playbackRate = 0.5;
+}
+function setPlaySpeednormal() { 
+    vid.playbackRate = 1.0;
+}
+function setPlaySpeedfast() { 
+    vid.playbackRate = 1.5;
+}
+function setPlaySpeedfaster() { 
+    vid.playbackRate = 2.0;
+}
+function setPlaySpeedfastest() { 
+    vid.playbackRate = 2.5;
+}
+</script>
+<button class="buttonloop"onclick="getPlaySpeed()" type="button">What is the playback speed?</button>
+<button class="buttonloop" onclick="setPlaySpeedslower()" type="button">0.25</button>
+<button class="buttonloop" onclick="setPlaySpeedslow()" type="button">0.5</button>
+<button class="buttonloop" onclick="setPlaySpeednormal()" type="button">Normal</button>
+<button class="buttonloop" onclick="setPlaySpeedfast()" type="button">1.5</button>
+<button class="buttonloop" onclick="setPlaySpeedfaster()" type="button">2.0</button>
+<button class="buttonloop" onclick="setPlaySpeedfastest()" type="button">2.5</button>
 		</div>
-		<div id="defaultBar">
-			<div id="progressBar"></div>
-		</div>
-		<div style="clear:both"></div>
+        </div>
 	</nav>
 </section>
 <script>
 function doFirst(){
-	barSize=600;
+	barSize=1200;
 	audio=document.getElementById('audio');
 	playButton=document.getElementById('playButton');
 	bar=document.getElementById('defaultBar');
@@ -206,10 +256,10 @@ window.addEventListener('load',doFirst,false);
     </script>
 <style>
 #skin {
-	width:700px;
+	width:1300px;
 	margin:10px auto;
 	padding:5px;
-	background:red;
+	background:purple;
 	border:4px solid black;
 	border-radius:10px;
 }
@@ -224,11 +274,11 @@ nav {
 #defaultBar {
 	position:relative;
 	float:left;
-	width:600px;
+	width:1200px;
 	height:16px;
 	padding:4px;
 	border: 2px solid black;
-	background:yellow;
+	background:#008CBA;
 }
 #progressBar {
 	position:absolute;
@@ -238,64 +288,9 @@ nav {
 }
 </style>
 
-<!-- Volume -->
-<button class="buttonloop"onclick="getVolume()" type="button">What is the volume?</button>
-<button class="buttonloop"onclick="plusVolume()" type="button">Vol+</button>
-<button class="buttonloop"onclick="minusVolume()" type="button">Vol-</button><br>
-<script>
-function getVolume() { 
-    alert(audio.volume);
-} 
-  
-function plusVolume() {
-    audio.volume = audio.volume + 0.1;
-} 
-  
-function minusVolume() { 
-    audio.volume = audio.volume - 0.1;
-} 
-</script>
-<div class="dropdown">
-<button class="buttonloop">Speed</button>
-  <div class="dropdown-content">
 
-<!-- Playback Speed --><br>
-<script>
-var vid = document.getElementById("audio");
 
-function getPlaySpeed() { 
-    alert(vid.playbackRate);
-}
-function setPlaySpeedslower() { 
-    vid.playbackRate = 0.25;
-}
-function setPlaySpeedslow() { 
-    vid.playbackRate = 0.5;
-}
-function setPlaySpeednormal() { 
-    vid.playbackRate = 1.0;
-}
-function setPlaySpeedfast() { 
-    vid.playbackRate = 1.5;
-}
-function setPlaySpeedfaster() { 
-    vid.playbackRate = 2.0;
-}
-function setPlaySpeedfastest() { 
-    vid.playbackRate = 2.5;
-}
-</script>
-<button onclick="getPlaySpeed()" type="button">What is the playback speed?</button><br>
-<button class="buttonloop" onclick="setPlaySpeedslower()" type="button">0.25</button><br>
-<button class="buttonloop" onclick="setPlaySpeedslow()" type="button">0.5</button><br>
-<button class="buttonloop" onclick="setPlaySpeednormal()" type="button">Normal</button><br>
-<button class="buttonloop" onclick="setPlaySpeedfast()" type="button">1.5</button><br>
-<button class="buttonloop" onclick="setPlaySpeedfaster()" type="button">2.0</button><br>
-<button class="buttonloop" onclick="setPlaySpeedfastest()" type="button">2.5</button><br>
-  </div>
-
-<br>
-<br>
+<br><br><br><br><br><br>
 <!-- BF LEAVE MESSAGE -->
 <script>
 function messagebeforeunload() {
