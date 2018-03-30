@@ -146,44 +146,7 @@ function checkLoop() {
     alert(vid.loop);
 }
 </script>
-<div class="dropdown">
-<button class="buttonloop">Speed</button>
-  <div class="dropdown-content">
 
-<!-- Playback Speed --><br>
-<script>
-var vid = document.getElementById("audio");
-
-function getPlaySpeed() { 
-    alert(vid.playbackRate);
-}
-function setPlaySpeedslower() { 
-    vid.playbackRate = 0.25;
-}
-function setPlaySpeedslow() { 
-    vid.playbackRate = 0.5;
-}
-function setPlaySpeednormal() { 
-    vid.playbackRate = 1.0;
-}
-function setPlaySpeedfast() { 
-    vid.playbackRate = 1.5;
-}
-function setPlaySpeedfaster() { 
-    vid.playbackRate = 2.0;
-}
-function setPlaySpeedfastest() { 
-    vid.playbackRate = 2.5;
-}
-</script>
-<button onclick="getPlaySpeed()" type="button">What is the playback speed?</button>
-<button class="buttonloop" onclick="setPlaySpeedslower()" type="button">0.25</button>
-<button class="buttonloop" onclick="setPlaySpeedslow()" type="button">0.5</button>
-<button class="buttonloop" onclick="setPlaySpeednormal()" type="button">Normal</button>
-<button class="buttonloop" onclick="setPlaySpeedfast()" type="button">1.5</button>
-<button class="buttonloop" onclick="setPlaySpeedfaster()" type="button">2.0</button>
-<button class="buttonloop" onclick="setPlaySpeedfastest()" type="button">2.5</button>
-  </div>
 <!-- Progress Bar -->
 <section id="skin">
 	<nav>
@@ -284,14 +247,52 @@ function getVolume() {
     alert(audio.volume);
 } 
   
-function plusVolume() { 
+function plusVolume() {
     audio.volume = audio.volume + 0.1;
 } 
   
 function minusVolume() { 
     audio.volume = audio.volume - 0.1;
 } 
-</script> 
+</script>
+<div class="dropdown">
+<button class="buttonloop">Speed</button>
+  <div class="dropdown-content">
+
+<!-- Playback Speed --><br>
+<script>
+var vid = document.getElementById("audio");
+
+function getPlaySpeed() { 
+    alert(vid.playbackRate);
+}
+function setPlaySpeedslower() { 
+    vid.playbackRate = 0.25;
+}
+function setPlaySpeedslow() { 
+    vid.playbackRate = 0.5;
+}
+function setPlaySpeednormal() { 
+    vid.playbackRate = 1.0;
+}
+function setPlaySpeedfast() { 
+    vid.playbackRate = 1.5;
+}
+function setPlaySpeedfaster() { 
+    vid.playbackRate = 2.0;
+}
+function setPlaySpeedfastest() { 
+    vid.playbackRate = 2.5;
+}
+</script>
+<button onclick="getPlaySpeed()" type="button">What is the playback speed?</button><br>
+<button class="buttonloop" onclick="setPlaySpeedslower()" type="button">0.25</button><br>
+<button class="buttonloop" onclick="setPlaySpeedslow()" type="button">0.5</button><br>
+<button class="buttonloop" onclick="setPlaySpeednormal()" type="button">Normal</button><br>
+<button class="buttonloop" onclick="setPlaySpeedfast()" type="button">1.5</button><br>
+<button class="buttonloop" onclick="setPlaySpeedfaster()" type="button">2.0</button><br>
+<button class="buttonloop" onclick="setPlaySpeedfastest()" type="button">2.5</button><br>
+  </div>
 
 <br>
 <br>
