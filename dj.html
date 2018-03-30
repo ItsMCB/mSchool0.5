@@ -1,121 +1,33 @@
-
 <!DOCTYPE html>
 <html>
 <body onbeforeunload="return messagebeforeunload()">
 <head>
 <title>DJ In The House - MMS</title>
 <style>
-.button {
-    background-color: #008CBA;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
+body {
+    background-color: #2C3539;
 }
-</style>
-<style>
-.creator {
-  display: inline-block;
-  border-radius: 0px;
-  background-color: #008CBA;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 28px;
-  padding: 15px 32px;
-  width: 200px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-}
-
-.creator span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.creator span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.creator:hover span {
-  padding-right: 25px;
-}
-
-.creator:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-</style>
-<style>
-.jakepaul {
-    color: #FF00FF;
-    cursor: pointer;
-}
-</style>
-<style>
 .title {
     color: #FF00FF;
     cursor: context-menu;
     font-size: 350%;
     text-align: center;
 }
-</style>
-<style>
-body {
-    background-color: #2C3539;
-}
-</style>
-<style>
-.songname {
-    background-color: #008CBA;
-    border: none;
-    color: white;
-    padding: 21px 150px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-</style>
-<style>
 .buttonloop {
     background-color: #008CBA;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 2px 6px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 15px;
     margin: 4px 2px;
     cursor: pointer;
 }
-</style>
-</head>
-<h1 class=title>MCB Media Interactive Player:DJ In The House</h1>
-<center>
-<br>
-<style>
 .three:link {color:white;text-decoration: none;}
 .three:visited {color:white;text-decoration: none;}
 .three:hover {background:#66ff66;text-decoration: none;}
-</style>
-<style>
 ul {
     background: #3399ff;
     padding: 10px;
@@ -128,8 +40,52 @@ ul li {
     color:white
 }
 </style>
+<style>
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #008CBA;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    color: white
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+</style>
+<style>
+.dropdownse {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-contentse {
+    display: none;
+    position: absolute;
+    background-color: #008CBA;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    color: white
+}
+
+.dropdownse:hover .dropdown-contentse {
+    display: block;
+}
+</style>
+</head>
+<h1 class=title>MCB Media Interactive Player:DJ In The House</h1>
+<center>
 <!-- Player -->
-<p>Click to play a audio file</p>
 <ul style="list-style: none">
   <li>Audio Files
     <ul id="list">
@@ -142,7 +98,7 @@ ul li {
   </li>
 </ul>
 
-<audio id="audio" controls="controls">
+<audio id="audio">
   <source id="audioSource" src=""></source>
   Your browser does not support the audio format.
 </audio>
@@ -157,14 +113,12 @@ ul li {
   source.src = elm.getAttribute('data-value');
 
   audio.load(); //call this to just preload the audio without playing
-  audio.play(); //call this to play the song right away
+  // audio.play(); //call this to play the song right away
 };
     </script>
     
 
  <br>
-<button onclick="document.getElementById('audio').play()" class="button">Play</button>
-<button onclick="document.getElementById('audio').pause()"class="button">Pause</button>
 
 <button onclick="enableLoop()"class="buttonloop">Enable Loop</button>
 <button onclick="disableLoop()" type="buttonloop" class="buttonloop">Disable Loop</button>
@@ -174,6 +128,7 @@ ul li {
 <br>
 <br>
 
+<!-- Playback Loop -->
 <script>
 var vid = document.getElementById("audio");
 
@@ -191,6 +146,9 @@ function checkLoop() {
     alert(vid.loop);
 }
 </script>
+<div class="dropdown">
+<button class="buttonloop">Speed</button>
+  <div class="dropdown-content">
 
 <!-- Playback Speed --><br>
 <script>
@@ -219,13 +177,121 @@ function setPlaySpeedfastest() {
 }
 </script>
 <button onclick="getPlaySpeed()" type="button">What is the playback speed?</button>
-<button onclick="setPlaySpeedslower()" type="button">0.25</button>
-<button onclick="setPlaySpeedslow()" type="button">0.5</button>
-<button onclick="setPlaySpeednormal()" type="button">Normal</button>
-<button onclick="setPlaySpeedfast()" type="button">1.5</button>
-<button onclick="setPlaySpeedfaster()" type="button">2.0</button>
-<button onclick="setPlaySpeedfastest()" type="button">2.5</button>
+<button class="buttonloop" onclick="setPlaySpeedslower()" type="button">0.25</button>
+<button class="buttonloop" onclick="setPlaySpeedslow()" type="button">0.5</button>
+<button class="buttonloop" onclick="setPlaySpeednormal()" type="button">Normal</button>
+<button class="buttonloop" onclick="setPlaySpeedfast()" type="button">1.5</button>
+<button class="buttonloop" onclick="setPlaySpeedfaster()" type="button">2.0</button>
+<button class="buttonloop" onclick="setPlaySpeedfastest()" type="button">2.5</button>
+  </div>
+<!-- Progress Bar -->
+<section id="skin">
+	<nav>
+		<div id="buttons">
+			<button type="button" id="playButton">Play</button>
+		</div>
+		<div id="defaultBar">
+			<div id="progressBar"></div>
+		</div>
+		<div style="clear:both"></div>
+	</nav>
+</section>
+<script>
+function doFirst(){
+	barSize=600;
+	audio=document.getElementById('audio');
+	playButton=document.getElementById('playButton');
+	bar=document.getElementById('defaultBar');
+	progressBar=document.getElementById('progressBar');
+ 
+	playButton.addEventListener('click', playOrPause, false);
+	bar.addEventListener('click', clickedBar, false);
+}
 
+function playOrPause() {
+	if (!audio.paused && !audio.ended){
+		audio.pause();
+		playButton.innerHTML='Play';
+		window.clearInterval(updateBar);
+	} else {
+		audio.play();
+		playButton.innerHTML='Pause';
+		updateBar=setInterval(update, 500);
+	}
+}
+
+function update() {
+	if (!audio.ended) {
+		var size=parseInt(audio.currentTime*barSize/audio.duration);
+		progressBar.style.width=size+'px';
+	} else {
+		progressBar.style.width='0px';
+		playButton.innerHTML='Play';
+		window.clearInterval(updateBar);
+	}
+}
+
+function clickedBar(e){
+	if(!audio.paused && !audio.ended){
+		var mouseX=e.pageX-bar.offsetLeft;
+		var newtime=mouseX*audio.duration/barSize;
+		audio.currentTime=newtime;
+		progressBar.style.width=mouseX+'px';
+	}
+}
+window.addEventListener('load',doFirst,false);
+    </script>
+<style>
+#skin {
+	width:700px;
+	margin:10px auto;
+	padding:5px;
+	background:red;
+	border:4px solid black;
+	border-radius:10px;
+}
+nav {
+	margin: 5px 0px;
+}
+#buttons {
+	float:left;
+	width:70px;
+	height:22px;
+}
+#defaultBar {
+	position:relative;
+	float:left;
+	width:600px;
+	height:16px;
+	padding:4px;
+	border: 2px solid black;
+	background:yellow;
+}
+#progressBar {
+	position:absolute;
+	width:0px;
+	height:16px;
+	background:blue;
+}
+</style>
+
+<!-- Volume -->
+<button class="buttonloop"onclick="getVolume()" type="button">What is the volume?</button>
+<button class="buttonloop"onclick="plusVolume()" type="button">Vol+</button>
+<button class="buttonloop"onclick="minusVolume()" type="button">Vol-</button><br>
+<script>
+function getVolume() { 
+    alert(audio.volume);
+} 
+  
+function plusVolume() { 
+    audio.volume = audio.volume + 0.1;
+} 
+  
+function minusVolume() { 
+    audio.volume = audio.volume - 0.1;
+} 
+</script> 
 
 <br>
 <br>
