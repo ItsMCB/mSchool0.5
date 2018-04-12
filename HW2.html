@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Css for row system -->
+<style type="text/css">
+    form{
+        margin: 20px 0;
+        
+    }
+    form input, button{
+        padding: 5px;
+        border-radius: 40px;
+        box-sizing: border-box;
+    }
+    table{
+        width: 100%;
+        margin-bottom: 20px;
+		border-collapse: collapse;
+    }
+    table, th, td{
+        border: 1px solid #cdcdcd;
+    }
+    table th, table td{
+        padding: 10px;
+        text-align: left;
+    }
+    	.dankmemes {
+    width: 25%;
+    height: 30px;
+    resize: none;
+    font-size:16px;
+}
+.dankmemesHW {
+    width: 60%;
+    height: 30px;
+    resize: none;
+    font-size:16px;
+}
+@import url(https://fonts.googleapis.com/css?family=Arvo);
+
+.HelloWorld  {
+
+  color:	#D5AD6D;
+
+	background: -webkit-linear-gradient(transparent, transparent),
+             -webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
+	background: -o-linear-gradient(transparent, transparent);
+	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 50px;
+}
+body {background-image: url("https://www.dropbox.com/s/2lsrazglk6dloor/pexels-photo-355465.jpeg?raw=1");} div { color: white; font-size: 20px;} .ct { background:linear-gradient(#2B2B2B,#292421);border: 3px solid #008CBA; color: white; font-size: 20px;}
+.clearsavedatabutton {
+    background-color: #f44336; /* Green */
+    border: none;
+    color: white;
+    padding: 9px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+   
+}
+</style>
+<!-- end of row sys css -->
+
+
+
+<body onload="checkEdits();startAutoSaving();startAutoSavingsa()">
+<center>
+<h1 class="HelloWorld">Homework 2.0 Alpha</h1>
+</center>
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".add-row").click(function(){
+            var Class = $("#Class").val();
+            var Homework = $("#Homework").val();
+            var markup = "<tr><td><input type='checkbox' Class='record'></td><td>" + Class + "</td><td>" + Homework + "</td></tr>";
+            $("table tbody").append(markup);
+        });
+
+        // Find and remove selected table rows
+        $(".delete-row").click(function(){
+            $("table tbody").find('input[Class="record"]').each(function(){
+            	if($(this).is(":checked")){
+                    $(this).parents("tr").remove();
+                }
+            });
+        });
+    });
+</script>
+<div id="edit" style="background-color:rgba(0, 0, 0, 0.1);">
+    <form>
+        <input type="text" id="Class" placeholder="Class"autocomplete="off" class="dankmemes">
+        <input type="text" id="Homework" style="length;10"placeholder="Homework"autocomplete="off" class="dankmemesHW">
+    	<input type="button" class="add-row" value="Add Task">
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Select</th>
+                <th>Class</th>
+                <th>Homework</th>
+            </tr>
+            <div id="homeworkRS"><!-- This is for resetting the HW -->
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox" Class="record"></td>
+                <td>Homeroom</td>
+                <td>Read the mSchool guide!</td>
+            </tr>
+            </div>
+        </tbody>
+    </table>
+    <button type="button" class="delete-row">Delete Row</button>
+
+</div>
+<!-- CLEAR SAVE DATA -->
+<button class="clearsavedatabutton" onclick="clearall()"> Clear Save DATA </button>
+<script>
+function clearall(){
+  localStorage.clear();
+window.location = "https://itsmcb.github.io/mSchool0.5/2Do"; // TO REFRESH THE PAGE
+}
+</script>
+<p> Credits </p>
+<p> Created by Martin Carl Bukoll </p>
+<p> Row System from <a href="https://www.tutorialrepublic.com/faq/how-to-add-remove-table-rows-dynamically-using-jquery.php">Tutorial Republic</a></p>
+<!-- 
+1. Add the remove all feature - 3
+2. Add the Design Back In - 2
+3. Move the class and homework to a sticky div thats at the top of the screen at all times. - 2
+4. move the credits to another page. - 3
+5. Make the GUI more colorful by letting the user select the color of it. - 3
+6. Add back save feature - 1
+7. Add back AUTO SAVE for HW - 1
+-->
+
+
+<!-- SAVE SYSTEM! -->
+</style>
+<script type="text/javascript">
+function saveEdits() {
+
+//get the editable element
+var editElem = document.getElementById("edit");
+
+//get the edited element content
+var userVersion = editElem.innerHTML;
+
+//save the content to local storage
+localStorage.userEdits = userVersion;
+
+//write a confirmation to the user
+document.getElementById("update").innerHTML="Edits saved!";
+	
+}
+</script>
+<script>
+function updateSAVEre() {
+//write a confirmation to the user
+document.getElementById("update").innerHTML="Welcome to Homework.";
+
+}
+</script>
+<script>
+function checkEdits() {
+
+//find out if the user has previously saved edits
+if(localStorage.userEdits!=null)
+document.getElementById("edit").innerHTML = localStorage.userEdits;
+}
+</script>
+<script>
+function startAutoSaving() {
+    setInterval(function(){var editElem = document.getElementById("edit"); var userVersion = editElem.innerHTML; localStorage.userEdits = userVersion; document.getElementById("update").innerHTML="Edits saved!";}, 3000);
+}
+</script>
+<script>
+function startAutoSavingsa() {
+    setInterval(function(){document.getElementById("update").innerHTML="Please wait while we save your work...";}, 4000);
+}
+</script>
+</head>
+
+</body>
+</html>
