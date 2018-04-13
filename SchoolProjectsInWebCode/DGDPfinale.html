@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+.zoom {
+    padding: 50px;
+    background-color: black;
+    transition: transform .2s;
+    width: 800px;
+    height: 700px;
+    margin: 0 auto;
+    color:white
+}
+
+.zoom:hover {
+    -ms-transform: scale(1.01); /* IE 9 */
+    -webkit-transform: scale(1.01); /* Safari 3-8 */
+    transform: scale(1.01); 
+}
+.zoomee {
+    padding: 50px;
+    background:linear-gradient(#2B2B2B,#292421);
+    transition: transform .2s;
+    width: 800px;
+    height: 700px;
+    margin: 0 auto;
+    color:white
+}
+
+.zoomee:hover {
+    -ms-transform: scale(1.01); /* IE 9 */
+    -webkit-transform: scale(1.01); /* Safari 3-8 */
+    transform: scale(1.01); 
+}
+</style>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #474e5d;
+    font-family: Helvetica, sans-serif;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+    left: 0;
+}
+
+/* Place the container to the right */
+.right {
+    left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -16px;
+}
+
+/* The actual content */
+.content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+</style>
+</head>
+<body>
+<center>
+
+<h1 style="color:red"><a name="gop1">MC’s DGDP Companion Guide</h1>
+<h2> A Companion Guide To <h2 style="color:red">Girls, Drums & Dangerous Pie </h2></h2>
+<h3> By: Martin Carl Bukoll </h3>
+<br>
+<!-- Make it so the table of contents sticks to the page!!! k -->
+<div>
+
+<style>
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child{background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+.tab { margin-left: 40px; }
+</style>
+
+
+<table id="customers">
+<a name="gop2">
+<h2> LOOK -> Click on "GO" to be taken to that section on this webpage! Your welcome I added it ~ MC </h2>
+  <tr>
+    <th>Title Page</th>
+    <th><a href="#gop1">GO</th>
+  </tr>
+  <tr>
+    <td>Table Of Contents</td>
+    <td><a href="#gop2">Go</td>
+  </tr>
+  <tr>
+    <td>Summary</td>
+    <td><a href="#gop3">Go</td>
+  </tr>
+    <tr>
+    <td>Theme Analysis</td>
+    <td><a href="#gop4">Go</td>
+  </tr>
+    <tr>
+    <td>Symbolism</td>
+    <td><a href="#gop5">Go</td>
+  </tr>
+      <tr>
+    <td>Timeline</td>
+    <td><a href="#gop6">Go</td>
+  </tr>
+</table>
+</div>
+</center>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div><a name="gop3"></div>
+<div class="zoom">
+<h1>SUMMARY<h1>
+<h3>&nbsp&nbsp&nbsp&nbsp&nbsp In the beginning of the book <i>Drums, Girls, and Dangerous Pie</i> by Jordan Sonnenblick, Steven hated his little brother Jeffery. He hates him because Jeffery idolizes him, follows him around, destroying his things and so on. Steven goes to school and drools when looking at Renee Albert, the most popular girl at school… who doesn't even know he’s alive. He is also part of the All-City band and is their drummer.</h3>
+<h3>&nbsp&nbsp&nbsp&nbsp&nbsp One morning Steven was making his brother some oatmeal, when Jeffery fell off the high bar stool and was bleeding from his nose. His parents rushed Jeffery to the hospital. Jeffrey was later diagnosed with leukemia. Steven got extremely depressed because of the news of Jeffery's cancer. He had apparently been sick for awhile without anyone noticing. Steven was constantly stressed and anxious and was worried about his little brother. He decided not to tell anyone.</h3>
+<h3>&nbsp&nbsp&nbsp&nbsp&nbsp Mrs. Alper had to take Jeffery to a hospital in Philadelphia; so, Steven was stuck at home with his father. Although all of this was going on, Jeffery was scared sometimes, but was more positive than his parents since he is young and doesn't really understand what was going on.</h3>
+<h3>&nbsp&nbsp&nbsp&nbsp&nbsp His friend Anette is concerned for Steven since she noticed that he has been more or so blanking out in class. Steven was confronted by his teachers on why he was so suddenly flunking all of his classes. He didn’t want to tell them but he couldn’t hold it in any longer and straight up told them all about it.</h3>
+<h3>&nbsp&nbsp&nbsp&nbsp&nbsp Meanwhile at home, Mr. Alper was having a really hard time keeping up with all the medical bills they were receiving. The band was thinking of dispatching because they didn’t know if they’d have enough credits at the end of the year so they were thinking of not doing the performance at all, and things looked bad for everyone. Renee and Annette made a plan that it would be a charity event, and they money would go towards Jeffrey’s hospital bills. This meant that the band would receive credits as well, so they could perform. Even though Jeffery wasn’t in the best shape he was let out so he could see Steven perform.</h3>
+<h3>&nbsp&nbsp&nbsp&nbsp&nbsp Once the day came that the band would perform, everything was going absolutely amazing! Halfway intermission had just begun when Jeffery threw up. Steven had to make a choice to stay and finish the performance or be there for this brother. Steven had earlier met a female patient at the hospital named Samantha, who wasn’t doing very good, and they had became friends. She told Steven to stay with him no matter what, and then persuaded him to go with his brother and not continue his performance. It turns out that Jeffery had an ear infection, so nothing major. That concludes the book.</h3>
+</div><br><br><br><br><br><br>
+<div class="zoomee">
+<a name="gop4">
+<h3>&nbsp&nbsp&nbsp&nbsp&nbspIn the book <i>Drums, Girls & Dangerous Pie</i> the theme of the book is to push through the hard times with confidence things will get better. One example of this is when Samantha said “Stay with your brother,...” - page 261. To give some context, Samantha was a patient in the hospital that Jeffery was at. Steven and her were friends. She had her Cancer for awhile and her friends and family didn’t visit often so she could emphasize with Jeffery’s situation, so she told Steven to always stick with her brother through thick and thin so he wouldn’t feel the sacred and loneliness she felt.</h3>
+<h3>&nbsp&nbsp&nbsp&nbsp&nbspIn Toward the end of the book Steven says a very important quote. “Maybe you’ll think it’s nuts that the brother of a cancer patient would feel lucky, but at that instant, I most surely did” - Page 238. In the beginning of the book Steven disliked his brother for being annoying and took his love for granted. Once Jeffery was in a critical condition he realized that he needs to step up as a brother and help Jeffery and himself push through this hard time as he recovers.</h3>
+<h3>&nbsp&nbsp&nbsp&nbsp&nbspIn Therefore, if you keep looking in a positive direction in life, things will eventually improve.</h3>
+
+</div>
+<a name="gop5">
+<div>
+<center>
+<style>
+img {
+    border-radius: 8px;
+}
+</style>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Soldier_shaves_head_in_support_of_cancer_research_150307-A-GY358-002.jpg" alt="Paris" width="300" height="300">
+</center>
+<h2>Quote</h2>
+<h3>Quote containing your symbol from the book: 
+“... she would have understood why I shaved my entire head the next night” - Loc 1539</h3>
+<h3>
+The fact that Steven shaved his head is symbolic for multiple reasons. One of those reasons is to show that he has empathy for this little brother. He put himself in his shoes and wanted to fight the fire with him, if you get what I mean. It also shows Stevens understanding of the situation, and that by shaving his head he knows what it's like to not have hair. I think of it like a team of like minded people, or in this case; people who don’t have their hair anymore.
+</h3>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+
+
+
+
+
+<a name="gop6">
+</center>
+<div class="timeline">
+  <div class="container left">
+    <div class="content">
+      <h2>Jeffery</h2>
+      <p>falls off the bar stool and is rushed to the hospital. He is later diagnosed with leukemia.
+</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>Jeffery</h2>
+      <p>and his mom has to go to Philadelphia, so it's just Steve and his dad.
+
+</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>Steven</h2>
+      <p>goes into a depression and starts to flunk his grades.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>Steven</h2>
+      <p>wants to help his parents, so he stops paying for his musical lessons.</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>Steven</h2>
+      <p>meets with his teachers and word gets out that his brother has Cancer.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>Renee</h2>
+      <p>comes over but Steven has to reject her entry since she was sick.</p>
+    </div>
+  </div>
+    <div class="container left">
+    <div class="content">
+      <h2>Anette and Renee</h2>
+      <p>have made a plan to make the All City band concert a charity event.</p>
+    </div>
+  </div>
+    <div class="container right">
+    <div class="content">
+      <h2>Halfway</h2>
+      <p>through the concert Steven makes the decision to go to the hospital with Jeffrey since he wasn’t going to well.</p>
+    </div>
+  </div>
+      <div class="container left">
+    <div class="content">
+      <h2>Steven</h2>
+      <p>graduates from 8th grade.</p>
+    </div>
+  </div>
+  
+  
+</div>
+
+</body>
+</html>
