@@ -1,6 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- SAVE SYSTEM! -->
+<script type="text/javascript">
+function saveEdits() {
+
+//get the editable element
+var editElem = document.getElementById("edit");
+
+//get the edited element content
+var userVersion = editElem.innerHTML;
+
+//save the content to local storage
+localStorage.userEdits = userVersion;
+
+//write a confirmation to the user
+document.getElementById("update").innerHTML="Edits saved!";
+	
+}
+</script>
+<script>
+function updateSAVEre() {
+//write a confirmation to the user
+document.getElementById("update").innerHTML="Welcome to Homework.";
+
+}
+</script>
+<script>
+function checkEdits() {
+
+//find out if the user has previously saved edits
+if(localStorage.userEdits!=null)
+document.getElementById("edit").innerHTML = localStorage.userEdits;
+}
+</script>
+<script>
+function startAutoSaving() {
+    setInterval(function(){var editElem = document.getElementById("edit"); var userVersion = editElem.innerHTML; localStorage.userEdits = userVersion; document.getElementById("update").innerHTML="Edits saved!";}, 4000);
+}
+</script>
+<script>
+function startAutoSavingsa() {
+    setInterval(function(){document.getElementById("update").innerHTML="Please wait while we save your work...";}, 4000);
+}
+</script>
 <!-- Css for row system -->
 <style type="text/css">
     form{
@@ -68,7 +111,6 @@ body {background-image: url("https://www.dropbox.com/s/2lsrazglk6dloor/pexels-ph
 <!-- end of row sys css -->
 
 
-
 <body onload="checkEdits();startAutoSaving();startAutoSavingsa()">
 <center>
 <h1 class="HelloWorld">Homework 2.0 Alpha</h1>
@@ -95,12 +137,12 @@ body {background-image: url("https://www.dropbox.com/s/2lsrazglk6dloor/pexels-ph
         });
     });
 </script>
-<div id="edit" style="background-color:rgba(0, 0, 0, 0.1);">
     <form>
         <input type="text" id="Class" placeholder="Class"autocomplete="off" class="dankmemes">
         <input type="text" id="Homework" style="length;10"placeholder="Homework"autocomplete="off" class="dankmemesHW">
     	<input type="button" class="add-row" value="Add Task">
     </form>
+    <div id="edit" contenteditable="true">
     <table>
         <thead>
             <tr>
@@ -119,9 +161,8 @@ body {background-image: url("https://www.dropbox.com/s/2lsrazglk6dloor/pexels-ph
             </div>
         </tbody>
     </table>
-    <button type="button" class="delete-row">Delete Row</button>
-
 </div>
+    <button type="button" class="delete-row">Delete Row</button>
 <!-- CLEAR SAVE DATA -->
 <button class="clearsavedatabutton" onclick="clearall()"> Clear Save DATA </button>
 <script>
@@ -133,6 +174,7 @@ window.location = "https://itsmcb.github.io/mSchool0.5/2Do"; // TO REFRESH THE P
 <p> Credits </p>
 <p> Created by Martin Carl Bukoll </p>
 <p> Row System from <a href="https://www.tutorialrepublic.com/faq/how-to-add-remove-table-rows-dynamically-using-jquery.php">Tutorial Republic</a></p>
+<p id="update"></p>
 <!-- 
 1. Add the remove all feature - 3
 2. Add the Design Back In - 2
@@ -143,52 +185,6 @@ window.location = "https://itsmcb.github.io/mSchool0.5/2Do"; // TO REFRESH THE P
 7. Add back AUTO SAVE for HW - 1
 -->
 
-
-<!-- SAVE SYSTEM! -->
-</style>
-<script type="text/javascript">
-function saveEdits() {
-
-//get the editable element
-var editElem = document.getElementById("edit");
-
-//get the edited element content
-var userVersion = editElem.innerHTML;
-
-//save the content to local storage
-localStorage.userEdits = userVersion;
-
-//write a confirmation to the user
-document.getElementById("update").innerHTML="Edits saved!";
-	
-}
-</script>
-<script>
-function updateSAVEre() {
-//write a confirmation to the user
-document.getElementById("update").innerHTML="Welcome to Homework.";
-
-}
-</script>
-<script>
-function checkEdits() {
-
-//find out if the user has previously saved edits
-if(localStorage.userEdits!=null)
-document.getElementById("edit").innerHTML = localStorage.userEdits;
-}
-</script>
-<script>
-function startAutoSaving() {
-    setInterval(function(){var editElem = document.getElementById("edit"); var userVersion = editElem.innerHTML; localStorage.userEdits = userVersion; document.getElementById("update").innerHTML="Edits saved!";}, 3000);
-}
-</script>
-<script>
-function startAutoSavingsa() {
-    setInterval(function(){document.getElementById("update").innerHTML="Please wait while we save your work...";}, 4000);
-}
-</script>
-</head>
 
 </body>
 </html>
