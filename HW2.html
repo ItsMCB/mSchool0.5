@@ -13,11 +13,11 @@ var editElem = document.getElementById("edit");
 var userVersion = editElem.innerHTML;
 
 //save the content to local storage
-localStorage.userEdits = userVersion;
+localStorage.userEditsHW2 = userVersion;
 
 //write a confirmation to the user
 document.getElementById("update").innerHTML="Edits saved!";
-	
+
 }
 </script>
 <script>
@@ -31,13 +31,13 @@ document.getElementById("update").innerHTML="Welcome to Homework.";
 function checkEdits() {
 
 //find out if the user has previously saved edits
-if(localStorage.userEdits!=null)
-document.getElementById("edit").innerHTML = localStorage.userEdits;
+if(localStorage.userEditsHW2!=null)
+document.getElementById("edit").innerHTML = localStorage.userEditsHW2;
 }
 </script>
 <script>
 function startAutoSaving() {
-    setInterval(function(){var editElem = document.getElementById("edit"); var userVersion = editElem.innerHTML; localStorage.userEdits = userVersion; document.getElementById("update").innerHTML="Edits saved!";}, 1000);
+    setInterval(function(){var editElem = document.getElementById("edit"); var userVersion = editElem.innerHTML; localStorage.userEditsHW2 = userVersion; document.getElementById("update").innerHTML="Edits saved!";}, 1000);
 }
 </script>
 <script>
@@ -49,7 +49,7 @@ function startAutoSavingsa() {
 <style type="text/css">
     form{
         margin: 20px 0;
-        
+
     }
     form input, button{
         padding: 5px;
@@ -106,7 +106,7 @@ body {background-image: url("https://www.dropbox.com/s/2lsrazglk6dloor/pexels-ph
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 4px;
-   
+
 }
 </style>
 <!-- end of row sys css -->
@@ -176,7 +176,7 @@ window.location = "https://itsmcb.github.io/mSchool0.5/HW2"; // TO REFRESH THE P
 <p> Created by Martin Carl Bukoll </p>
 <p> Row System from <a href="https://www.tutorialrepublic.com/faq/how-to-add-remove-table-rows-dynamically-using-jquery.php">Tutorial Republic</a></p>
 <p id="update"></p>
-<!-- 
+<!--
 1. Add the remove all feature - 3
 2. Add the Design Back In - 2
 3. Move the class and homework to a sticky div thats at the top of the screen at all times. - 2
