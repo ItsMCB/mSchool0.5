@@ -37,12 +37,12 @@ document.getElementById("edit").innerHTML = localStorage.userEdits;
 </script>
 <script>
 function startAutoSaving() {
-    setInterval(function(){var editElem = document.getElementById("edit"); var userVersion = editElem.innerHTML; localStorage.userEdits = userVersion; document.getElementById("update").innerHTML="Edits saved!";}, 4000);
+    setInterval(function(){var editElem = document.getElementById("edit"); var userVersion = editElem.innerHTML; localStorage.userEdits = userVersion; document.getElementById("update").innerHTML="Edits saved!";}, 1000);
 }
 </script>
 <script>
 function startAutoSavingsa() {
-    setInterval(function(){document.getElementById("update").innerHTML="Please wait while we save your work...";}, 4000);
+    setInterval(function(){document.getElementById("update").innerHTML="Please wait while we save your work...";}, 1000);
 }
 </script>
 <!-- Css for row system -->
