@@ -1,0 +1,19 @@
+<input type="button" value="Change site" onClick="newSite()" />
+<iframe id="myIframe" src="http://memes.com/" onLoad="iframeDidLoad();"></iframe>
+
+<script>
+
+function newSite() {
+    var sites = ['http://bing.com',
+                 'http://gizmodo.com/',
+                 'http://memes.com/']
+    
+    document.getElementById('myIframe').src = sites[Math.floor(Math.random() * sites.length)];
+}
+</script>
+<style>
+#myIframe {
+    width: 600px;
+    height: 600px;
+}
+</style>
