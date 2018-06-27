@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <body onbeforeunload="return messagebeforeunload()">
@@ -252,7 +253,19 @@ nav {
 }
 </style>
 
+<input type="file" id="file" />
+<script>
+var objectUrl;
 
+$("#file").change(function(e){
+    var file = e.currentTarget.files[0];
+    
+    objectUrl = URL.createObjectURL(file);
+    $("#audio").prop("src", objectUrl);
+        audio.pause();
+        audio.play();
+});
+</script>
 
 <!-- Jquery Hide Thing -->
 <script>
@@ -288,6 +301,7 @@ function messagebeforeunload() {
     return "Do you want to close this page?";
 }
 </script>
+
 <center>
 </body>
 </html>
