@@ -263,7 +263,8 @@ $("#file").change(function(e){
     objectUrl = URL.createObjectURL(file);
     $("#audio").prop("src", objectUrl);
         audio.pause();
-        audio.play();
+        updateBar=setInterval(update, 500);
+        playOrPause();
 });
 </script>
 
