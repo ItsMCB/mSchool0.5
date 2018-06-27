@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--
+ *  Copyright (c) 2015 The WebRTC project authors. All Rights Reserved.
+ *
+ *  Use of this source code is governed by a BSD-style license
+ *  that can be found in the LICENSE file in the root of the source
+ *  tree.
+-->
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="description" content="MCB Photo Filter Made With WebRTC Tech">
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
+  <meta itemprop="description" content="Client-side WebRTC code samples">
+  <meta itemprop="image" content="../../../images/webrtc-icon-192x192.png">
+  <meta itemprop="name" content="MCB Photo Filter Made With WebRTC Tech">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta id="theme-color" name="theme-color" content="#ffffff">
+
+  <base target="_blank">
+
+  <title>MCB Photo WEBRTC</title>
+
+
+  <style>
+    .none {
+      -webkit-filter: none;
+      filter: none;
+    }
+    .blur {
+      -webkit-filter: blur(3px);
+      filter: blur(3px);
+    }
+    .grayscale {
+      -webkit-filter: grayscale(1);
+      filter: grayscale(1);
+    }
+    .invert {
+      -webkit-filter: invert(1);
+      filter: invert(1);
+    }
+    .sepia {
+      -webkit-filter: sepia(1);
+      filter: sepia(1);
+    }
+    button#snapshot {
+      margin: 0 10px 25px 0;
+      width: 110px;
+    }
+    video {
+      object-fit: cover;
+    }
+  </style>
+
+</head>
+
+<body>
+<center>
+  <div id="container">
+
+    <h1><a href="//webrtc.github.io/samples/" title="WebRTC samples homepage">MCB's WebRTC Photo Capture</a></h1>
+
+    <video autoplay></video>
+
+    <label for="select">Filter: </label>
+    <select id="filter">
+      <option value="none">None</option>
+      <option value="blur">Blur</option>
+      <option value="grayscale">Grayscale</option>
+      <option value="invert">Invert</option>
+      <option value="sepia">Sepia</option>
+    </select>
+
+    <button id="snapshot">Take snapshot</button>
+
+    <canvas id="canvasX"></canvas>
+<script>
+function download(){
+        var download = document.getElementById("download");
+        var image = document.getElementById("canvasX").toDataURL("image/png")
+                    .replace("image/png", "image/octet-stream");
+        download.setAttribute("href", image);
+
+    }
+</script>
+<a id="download" download="image.png"><button type="button" onClick="download()">Download</button></a>
+  </div>
+  </center>
+
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+</body>
+</html>
+
+<script>
+/*
+ *  Copyright (c) 2015 The WebRTC project authors. All Rights Reserved.
+ *
+ *  Use of this source code is governed by a BSD-style license
+ *  that can be found in the LICENSE file in the root of the source
+ *  tree.
+ */
+
+'use strict';
+
+var snapshotButton = document.querySelector('button#snapshot');
+var filterSelect = document.querySelector('select#filter');
+
+// Put variables in global scope to make them available to the browser console.
+var video = window.video = document.querySelector('video');
+var canvas = window.canvas = document.querySelector('canvas');
+canvas.width = 480;
+canvas.height = 360;
+
+snapshotButton.onclick = function() {
+  canvas.className = filterSelect.value;
+  canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+};
+
+filterSelect.onchange = function() {
+  video.className = filterSelect.value;
+};
+
+var constraints = {
+  audio: false,
+  video: true
+};
+
+function handleSuccess(stream) {
+  window.stream = stream; // make stream available to browser console
+  video.srcObject = stream;
+}
+
+function handleError(error) {
+  console.log('navigator.getUserMedia error: ', error);
+}
+
+navigator.mediaDevices.getUserMedia(constraints).
+    then(handleSuccess).catch(handleError);
+</script>
