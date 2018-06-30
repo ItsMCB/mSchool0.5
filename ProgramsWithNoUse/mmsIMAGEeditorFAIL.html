@@ -1,0 +1,100 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+.slidecontainer {
+    width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: black;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+</style>
+
+<label>Image File:</label><br/>
+<input type="file" id="imageLoader" name="imageLoader"/>
+<canvas id="imageCanvas"></canvas>
+<script>
+var imageLoader = document.getElementById('imageLoader');
+    imageLoader.addEventListener('change', handleImage, false);
+var canvas = document.getElementById('imageCanvas');
+var ctx = canvas.getContext('2d');
+
+
+function handleImage(e){
+    var reader = new FileReader();
+    reader.onload = function(event){
+        var img = new Image();
+        img.onload = function(){
+            canvas.width = img.width;
+            canvas.height = img.height;
+            ctx.drawImage(img,0,0);
+        }
+        img.src = event.target.result;
+    }
+    reader.readAsDataURL(e.target.files[0]);     
+}
+</script>
+
+
+
+<!-- old zhizzlzlzlzlzlzzlzlzl -->
+<div onclick="updateBlurNUM()" class="slidecontainer">
+  <p>Blur Range Slider: <span id="efBlur-RANGE-number">0</span></p>
+  <input type="range" min="0" max="10" value="5" class="slider" id="efBlur-RANGE" onclick="updateBlurNUM()">
+</div>
+
+<script>
+    // Standard syntax
+  var efBlur = document.getElementById("efBlur-RANGE")
+  efBlur.onchange = function(evt) {
+    var x = evt.target.value;
+    document.getElementById("imageCanvas").style.filter = "blur("+x+"px)";
+
+    // Safari 6.0 - 9.0
+  document.getElementById("imageCanvas").setAttribute("style","-webkit-filter:blur(" + x + "px)")
+
+}
+
+function updateBlurNUM() {
+    var x = document.getElementById("efBlur-RANGE").value;
+    document.getElementById("efBlur-RANGE-number").innerHTML = x;
+}
+</script>
+
+
+<!-- DOWNLOAD CANVAS AS IMAGE SECTION! -->
+<a href="#" class="button" id="btn-download" download="my-file-name.png">Download</a>
+<script>
+var button = document.getElementById('btn-download');
+button.addEventListener('click', function (e) {
+    var dataURL = canvas.toDataURL('image/png');
+    button.href = dataURL;
+});
+ </script>
+ <h1> Blur Broken :/</h1>
