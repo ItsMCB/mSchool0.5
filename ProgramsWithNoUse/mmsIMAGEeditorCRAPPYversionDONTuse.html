@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.slidecontainer {
+    width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: black;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+<h1>Image Editor</h1>
+<input type="file" onchange="previewFile()"><br>
+<img id="userIMG" src="" height="300" alt="Image preview...">
+<script>
+   function previewFile(){
+       var preview = document.querySelector('img'); //selects the query named img
+       var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+       var reader  = new FileReader();
+
+       reader.onloadend = function () {
+           preview.src = reader.result;
+       }
+
+       if (file) {
+           reader.readAsDataURL(file); //reads the data as a URL
+       } else {
+           preview.src = "";
+       }
+  }
+
+  previewFile();  //calls the function named previewFile()
+  </script>
+
+<div onclick="updateBlurNUM()" class="slidecontainer">
+  <p>Blur Range Slider: <span id="efBlur-RANGE-number">0</span></p>
+  <input type="range" min="0" max="10" value="5" class="slider" id="efBlur-RANGE" onclick="updateBlurNUM()">
+</div>
+
+<script>
+    // Standard syntax
+  var efBlur = document.getElementById("efBlur-RANGE")
+  efBlur.onchange = function(evt) {
+    var x = evt.target.value;
+    document.getElementById("userIMG").style.filter = "blur("+x+"px)";
+
+    // Safari 6.0 - 9.0
+  document.getElementById("userIMG").setAttribute("style","-webkit-filter:blur(" + x + "px)")
+
+}
+
+function updateBlurNUM() {
+    var x = document.getElementById("efBlur-RANGE").value;
+    document.getElementById("efBlur-RANGE-number").innerHTML = x;
+}
+</script>
+</body>
+</html>
